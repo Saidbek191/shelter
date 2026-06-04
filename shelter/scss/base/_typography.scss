@@ -1,0 +1,38 @@
+
+body {
+	font-family: $font-main;
+	font-size: $font-base;
+	line-height: $lh-base;
+	color: $color-dark;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+}
+
+h1 {
+	font-size: $fs-2xl;
+	line-height: $lh-title;
+}
+
+h3 {
+	font-size: $fs-1xl;
+	line-height: $lh-title;
+}
+
+h4 {
+	font-size: $fs-md;
+	line-height: $lh-pets-title;
+	letter-spacing: 0.06em;
+}
+
+h5 {
+	font-size: $fs-base;
+	line-height: $lh-pets-character;
+	letter-spacing: 0.06em;
+}
+
+p {
+	font-size: $fs-base;
+	line-height: $lh-base;
+}
