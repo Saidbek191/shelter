@@ -198,13 +198,13 @@ p {
   line-height: 1.6;
 }
 
-.main__bg {
+.hero__bg {
   position: relative;
   background: linear-gradient(90deg, #513d27 0%, #1a1a1c 100%);
   overflow: hidden;
   z-index: 0;
 }
-.main__bg::before {
+.hero__bg::before {
   content: "";
   position: absolute;
   inset: 0;
