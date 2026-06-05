@@ -10,7 +10,7 @@ $color-dark-2xl: #444444;
 $color-dark-3xl: #292929;
 $color-primary: #f1cdb3;
 $color-primary-light: #fddcc4;
-$start-screen-gradient: linear-gradient(180deg, #513d27 0%, #1a1a1c 100%);
+$start-screen-gradient: linear-gradient(90deg, #513d27 0%, #1a1a1c 100%);
 $color-dark-screen: #211F20;
 
 // FONTS
@@ -19,8 +19,10 @@ $font-secondary: "Arial", sans-serif;
 
 // FONT-SIZE
 $fs-xs: 0.75rem; // 12
-$fs-sm: 0.875rem; // 14
+$fs-1xs: 0.8125rem; // 13
+$fs-sm: 0.9375rem; // 15
 $fs-base: 1rem; // 16;
+$fs-1base: 1.0625rem; // 17
 $fs-md: 1.25rem; // 20
 $fs-lg: 1.5rem; // 24
 $fs-xl: 2rem; // 32
@@ -34,7 +36,7 @@ $space-3: 1rem; // 16
 $space-4: 1.25rem; // 20
 $space-5: 1.5rem; // 24
 $space-6: 1.875rem; // 30
-$space-7: 2.25rem; // 36
+$space-7: 2.1875rem; // 35
 
 $space-8: 2.5rem; // 40
 $space-9: 2.625rem; // 42
@@ -54,6 +56,8 @@ $space-20: 6.625rem; // 106
 $space-21: 7.5rem; // 120
 $space-22: 10rem; // 160
 
+$btn-sp-v: 1rem; // 16
+$btn-sp-h: 3rem; // 48
 
 // LINE-HEIGHT
 $lh-pets-character: 1.1; // 110%

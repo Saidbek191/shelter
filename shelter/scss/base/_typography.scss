@@ -3,15 +3,46 @@
 
 body {
 	font-family: $font-main;
-	font-size: $fs-base;
+	font-size: $fs-sm;
 	line-height: $lh-base;
 	color: $color-dark-3xl;
+}
+
+@font-face {
+	font-family: "Georgia";
+	src: url("../../assets/fonts/Georgia-Regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Georgia";
+	src: url("../../assets/fonts/Georgia-Bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Arial";
+	src: url("../../assets/fonts/Arial-Italic.woff2") format("woff2");
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Arial";
+	src: url("../../assets/fonts/Arial-Regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
 }
-
+	
 h1 {
 	font-size: $fs-2xl;
 	line-height: $lh-title;
