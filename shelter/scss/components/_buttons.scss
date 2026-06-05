@@ -1,17 +1,10 @@
 @use '../abstracts/variables' as *;
-
+@use '../abstracts/mixins' as *;
 .button {
-	display: inline-block;
-	padding: $btn-sp-v $btn-sp-h;
-	border: none;
+	@include btn-property;
 	cursor: pointer;
-	font-size: $fs-1base;
-	font-family: $font-main;
-	border-radius: 100px;
+	border: none;
 	background-color: $color-primary;
-	letter-spacing: 6%;
-	line-height: $lh-title;
-	color: $color-dark-3xl;
 	transition: background-color 0.2s ease-in-out;
 	&:hover {
 		background-color: $color-primary-light;
@@ -19,14 +12,24 @@
 }
 
 .button--secondary {
-	font-family: $font-main;
-	font-size: $fs-base;
+	@include btn-property;
 	background: transparent;
-	border: 1px solid $color-primary;
-	border-radius: 4px;
-	color: $color-dark-3xl;
-	transition: 0.2s ease;
+	border: 2px solid $color-primary;
+	transition: background-color 0.2s ease-in-out;
 	&:hover {
-		background: $color-primary-light;
+		background-color: $color-primary-light;
 	}
+}
+
+.prev, .next {
+	display: inline-block;
+	width: 52px;
+	height: 52px;
+	text-align: center;
+	border: 2px solid $color-primary;
+	padding: $space-1;
+	border-radius: 100%;
+}
+.next {
+	transform: rotate(180deg);
 }

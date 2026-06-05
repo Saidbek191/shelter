@@ -1,0 +1,35 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+
+.cards__wrapper {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: $space-18;
+}
+.card {
+	display: flex;
+	flex-direction: column;
+	
+	background-color: $color-light-s;
+	border-radius: $space-1;
+	transition: background-color 0.3s;
+	cursor: pointer;
+	&:hover {
+		transform: translate(-5px);
+		background-color: $color-light-l;
+	}
+}
+
+.card__img {
+	width: 100%;
+	border-radius: 10px;
+}
+
+.card__title {
+	font-family: $font-main;
+	font-size: $fs-md;
+	text-align: center;
+	color: $color-dark-l;
+	letter-spacing: 0.06em;
+}
