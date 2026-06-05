@@ -236,10 +236,13 @@ p {
   padding-bottom: 2.625rem;
 }
 .hero__article .text__hero {
+  color: #cdcdcd;
+}
+
+.text {
   font-family: "Arial", sans-serif;
   font-size: 0.9375rem;
   line-height: 1.6;
-  color: #cdcdcd;
 }
 
 .button__hero {
@@ -253,6 +256,44 @@ p {
 }
 .hero__img .img__hero {
   flex: 0 0 58.17%;
+}
+
+.about {
+  margin: 5rem 0 6.25rem 0;
+}
+
+.about__wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 7.5rem;
+}
+
+.about__img {
+  flex: 0 0 24.2%;
+}
+.about__img .img__about {
+  padding-top: 1rem;
+}
+
+.about__article {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  flex: 0 0 36.2%;
+  padding-top: 1.5rem;
+}
+
+.title__about {
+  width: 85%;
+}
+
+.title {
+  color: #545454;
+  letter-spacing: 6%;
+}
+
+.text__about {
+  color: #4c4c4c;
 }
 
 /*# sourceMappingURL=style.css.map */

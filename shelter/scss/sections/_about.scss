@@ -1,3 +1,37 @@
 @use '../abstracts/mixins' as *;
 @use '../abstracts/variables' as *;
 
+.about {
+	margin: $space-16 0 $space-19 0;
+}
+.about__wrapper {
+	display: flex;
+	justify-content: center;
+	gap: $space-21;
+}
+.about__img {
+	flex: 0 0 24.2%;
+	.img__about {
+		padding-top: $space-3;
+	}
+}
+
+.about__article {
+	display: flex;
+	flex-direction: column;
+	gap: $space-5;
+	flex: 0 0 36.2%;
+	padding-top: $space-5;
+}
+.title__about {
+	width: 85%;
+}
+
+.title {
+	color: $color-dark-l;
+	letter-spacing: 6%;
+}
+
+.text__about {
+	color: $color-dark-xl;
+}

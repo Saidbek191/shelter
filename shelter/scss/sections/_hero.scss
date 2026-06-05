@@ -40,11 +40,15 @@
 		padding-bottom: $space-9;
 	}
 	.text__hero {
-		font-family: $font-secondary;
-		font-size: $fs-sm;
-		line-height: $lh-base;
 		color: $color-dark-s;
 	}
+}
+
+.text {
+	font-family: $font-secondary;
+	font-size: $fs-sm;
+	line-height: $lh-base;
+
 }
 
 .button__hero {
