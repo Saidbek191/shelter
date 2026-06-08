@@ -297,6 +297,11 @@ p {
   color: #f1cdb3;
 }
 
+.questions__title,
+.visit__title {
+  color: #fff;
+}
+
 .questions__email,
 .questions__phone,
 .visit__boston,
@@ -323,8 +328,12 @@ p {
   color: #f1cdb3;
 }
 
-address {
-  text-style: none;
+.footer__address,
+.questions__link {
+  font-size: 1.25rem;
+  font-style: normal;
+  letter-spacing: 6%;
+  line-height: 1.15;
 }
 
 .visit__boston {

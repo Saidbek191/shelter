@@ -20,7 +20,9 @@
 	gap: $space-8;
 	color: $color-primary;
 }
-.questions__title {
+.questions__title,
+.visit__title {
+	color: $color-light-xl;
 }
 .questions__email, 
 .questions__phone,
@@ -47,8 +49,12 @@
 
 }
 
-address {
-	text-style: none;
+.footer__address,
+.questions__link {
+	font-size: $fs-md;
+	font-style: normal;
+	letter-spacing: 6%;
+	line-height: $lh-pets-title;
 }
 .visit__boston {
 	padding-top: $space-6;
