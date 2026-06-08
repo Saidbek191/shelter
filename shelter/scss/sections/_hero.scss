@@ -28,7 +28,7 @@
 
 
 .hero__article {
-	padding-top: 46px;
+	padding-top: $space-7;
 	z-index: 2;
 	flex: 0 0 38.33%;
 	.title__hero {
@@ -52,6 +52,8 @@
 }
 
 .button__hero {
+	width: 13rem;
+	height: $space-11;
 	margin-top: $space-9;
 }
 

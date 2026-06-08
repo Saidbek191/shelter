@@ -1,6 +1,8 @@
 @use '../abstracts/variables' as *;
 @use '../abstracts/mixins' as *;
 .button {
+	width: 16.375rem;
+	height: $space-11;
 	@include btn-property;
 	cursor: pointer;
 	border: none;
@@ -12,24 +14,47 @@
 }
 
 .button--secondary {
+	width: 11.75rem;
+	height: 3.25rem;
 	@include btn-property;
 	background: transparent;
 	border: 2px solid $color-primary;
 	transition: background-color 0.2s ease-in-out;
 	&:hover {
 		background-color: $color-primary-light;
+		border-color: transparent;
 	}
 }
 
-.prev, .next {
+.pets__arrow--prev, .pets__arrow--next {
 	display: inline-block;
 	width: 52px;
 	height: 52px;
 	text-align: center;
 	border: 2px solid $color-primary;
-	padding: $space-1;
+	// padding: $space-1;
 	border-radius: 100%;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+	&:hover {
+		background-color: $color-primary-light;
+		border-color: transparent;
+	}
 }
-.next {
+.pets__arrow--next {
 	transform: rotate(180deg);
+	&:hover {
+		background-color: $color-primary-light;
+		border-color: transparent;
+	}	
+}
+
+.pets__arrow--prev {
+	margin-right: $space-11;
+	padding-bottom: 5px;
+}
+
+.pets__arrow--next {
+	margin-left: $space-11;
+	padding-top: 0;
 }

@@ -90,28 +90,55 @@
       <section class="pets">
         <div class="container">
           <h3 class="pets__title title">
-            Our friends who are looking for a house
+            Our friends who <br />
+            are looking for a house
           </h3>
-          <div class="cards__wrapper">
-            <div class="prev">
+          <div class="pets__slider">
+            <button class="pets__arrow pets__arrow--prev">
               <svg viewBox="0 0 14 6" fill="currentColor">
                 <path d="M14 2V4H3V6L0 3L3 0V2H14Z" fill="currentColor" />
               </svg>
+            </button>
+            <div class="pets__cards">
+              <article class="pets__card card">
+                <img
+                  class="card__img"
+                  src="./assets/images/pets-katrine.jpg"
+                  alt="cat-katrine"
+                />
+                <h4 class="card__title">Katrine</h4>
+                <button class="card__button button--secondary">
+                  Learn more
+                </button>
+              </article>
+              <article class="pets__card card">
+                <img
+                  class="card__img"
+                  src="./assets/images/pets-jennifer.jpg"
+                  alt="cat-katrine"
+                />
+                <h4 class="card__title">Jennifer</h4>
+                <button class="card__button button--secondary">
+                  Learn more
+                </button>
+              </article>
+              <article class="pets__card card">
+                <img
+                  class="card__img"
+                  src="./assets/images/pets-woody.jpg"
+                  alt="cat-katrine"
+                />
+                <h4 class="card__title">Woody</h4>
+                <button class="card__button button--secondary">
+                  Learn more
+                </button>
+              </article>
             </div>
-            <article class="pets__card card">
-              <img
-                class="card__img"
-                src="./assets/images/pets-katrine.jpg"
-                alt="cat-katrine"
-              />
-              <h4 class="card__title">Katrine</h4>
-              <button class="card__button button--secondary">Learn more</button>
-            </article>
-            <div class="next">
+            <button class="pets__arrow pets__arrow--next">
               <svg viewBox="0 0 14 6" fill="currentColor">
                 <path d="M14 2V4H3V6L0 3L3 0V2H14Z" fill="currentColor" />
               </svg>
-            </div>
+            </button>
           </div>
           <button class="pets__btn button">Get to know the rest</button>
         </div>
