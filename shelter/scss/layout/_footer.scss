@@ -1,0 +1,64 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.footer {
+	padding-top: $space-8;
+}
+.footer__wrapper {
+	display: flex;
+	justify-content: space-between;
+	gap: $space-22;
+
+	img {
+		height: 100%;
+	}
+}
+
+.questions {
+	display: flex;
+	flex-direction: column;
+	gap: $space-8;
+	color: $color-primary;
+}
+.questions__title {
+}
+.questions__email, 
+.questions__phone,
+.visit__boston,
+.visit__london {
+	display: flex;
+	align-items: center;
+	gap: $space-4;
+}
+.questions__icon {
+	width: $space-8;
+	height: $space-6;
+}
+.questions__phone {
+	display: flex;
+	align-items: center;
+	gap: $space-4;
+}
+.questions__link {}
+.visit {
+	display: flex;
+	flex-direction: column;
+	color: $color-primary;
+
+}
+
+address {
+	text-style: none;
+}
+.visit__boston {
+	padding-top: $space-6;
+}
+.visit__london {
+	padding-top: $space-7;
+}
+.visit__icon {
+	svg {
+		width: $space-5;
+		height: $space-6;
+	}
+}

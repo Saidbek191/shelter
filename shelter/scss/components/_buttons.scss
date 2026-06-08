@@ -20,6 +20,7 @@
 	background: transparent;
 	border: 2px solid $color-primary;
 	transition: background-color 0.2s ease-in-out;
+	cursor: pointer;
 	&:hover {
 		background-color: $color-primary-light;
 		border-color: transparent;

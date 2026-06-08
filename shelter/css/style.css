@@ -53,6 +53,16 @@ a {
 }
 
 body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+body {
   font-family: "Georgia", serif;
   font-size: 0.9375rem;
   line-height: 1.6;
@@ -150,6 +160,7 @@ p {
   background: transparent;
   border: 2px solid #f1cdb3;
   transition: background-color 0.2s ease-in-out;
+  cursor: pointer;
 }
 .button--secondary:hover {
   background-color: #fddcc4;
@@ -266,13 +277,76 @@ p {
   line-height: 1.6;
 }
 
-.hero__bg {
+.footer {
+  padding-top: 2.5rem;
+}
+
+.footer__wrapper {
+  display: flex;
+  justify-content: space-between;
+  gap: 10rem;
+}
+.footer__wrapper img {
+  height: 100%;
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  color: #f1cdb3;
+}
+
+.questions__email,
+.questions__phone,
+.visit__boston,
+.visit__london {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.questions__icon {
+  width: 2.5rem;
+  height: 1.875rem;
+}
+
+.questions__phone {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.visit {
+  display: flex;
+  flex-direction: column;
+  color: #f1cdb3;
+}
+
+address {
+  text-style: none;
+}
+
+.visit__boston {
+  padding-top: 1.875rem;
+}
+
+.visit__london {
+  padding-top: 2.1875rem;
+}
+
+.visit__icon svg {
+  width: 1.5rem;
+  height: 1.875rem;
+}
+
+.bg--gradient {
   position: relative;
   background: linear-gradient(90deg, #513d27 0%, #1a1a1c 100%);
   overflow: hidden;
   z-index: 0;
 }
-.hero__bg::before {
+.bg--gradient::before {
   content: "";
   position: absolute;
   inset: 0;
