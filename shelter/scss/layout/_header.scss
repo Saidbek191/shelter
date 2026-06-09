@@ -7,7 +7,7 @@
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	height: $space-13;
+	height: $space-18;
 }
 
 
@@ -17,9 +17,9 @@
 	flex-direction: column;
 	align-items: center;
 	gap: $space-1;
+	cursor: default;
 	
 	.logo {
-		font-family: $font-main;
 		font-size: $fs-xl;
 		line-height: $lh-pets-character;
 		letter-spacing: 0.06em;
@@ -29,7 +29,7 @@
 	.logo__subtitle {
 		font-family: $font-secondary;
 		font-size: $fs-1xs;
-		letter-spacing: 0.07em;
+		letter-spacing: 0.1em;
 		color: $color-light-xl;
 	}
 }
@@ -40,12 +40,17 @@
 	font-size: $fs-sm;
 	.header__list {
 		display: flex;
-		gap: $space-7;
+		gap: 2rem;
+		margin: 0 20px 6px 0;
 	}
 
 	.header__item {
 		color: $color-dark-s;
 		line-height: $lh-base;
+		border-bottom: 2px solid transparent;
+		transition: border-bottom 0.2s ease-in-out;
+		&:hover {
+			border-bottom: 2px solid $color-primary;
+		}
 	}
-
 }

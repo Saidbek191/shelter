@@ -174,6 +174,7 @@ p {
   text-align: center;
   border: 2px solid #f1cdb3;
   border-radius: 100%;
+  background-color: transparent;
   cursor: pointer;
   transition: background-color 0.2s ease-in-out;
 }
@@ -239,7 +240,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 3.75rem;
+  height: 5.625rem;
 }
 
 .header__logo {
@@ -248,9 +249,9 @@ p {
   flex-direction: column;
   align-items: center;
   gap: 0.625rem;
+  cursor: default;
 }
 .header__logo .logo {
-  font-family: "Georgia", serif;
   font-size: 2rem;
   line-height: 1.1;
   letter-spacing: 0.06em;
@@ -259,7 +260,7 @@ p {
 .header__logo .logo__subtitle {
   font-family: "Arial", sans-serif;
   font-size: 0.8125rem;
-  letter-spacing: 0.07em;
+  letter-spacing: 0.1em;
   color: #fff;
 }
 
@@ -270,11 +271,17 @@ p {
 }
 .header__nav .header__list {
   display: flex;
-  gap: 2.1875rem;
+  gap: 2rem;
+  margin: 0 20px 6px 0;
 }
 .header__nav .header__item {
   color: #cdcdcd;
   line-height: 1.6;
+  border-bottom: 2px solid transparent;
+  transition: border-bottom 0.2s ease-in-out;
+}
+.header__nav .header__item:hover {
+  border-bottom: 2px solid #f1cdb3;
 }
 
 .footer {
@@ -288,6 +295,7 @@ p {
 }
 .footer__wrapper img {
   height: 100%;
+  padding: 8px 17px 0 0;
 }
 
 .questions {
@@ -295,11 +303,14 @@ p {
   flex-direction: column;
   gap: 2.5rem;
   color: #f1cdb3;
+  margin-top: 1.5rem;
 }
 
 .questions__title,
 .visit__title {
   color: #fff;
+  letter-spacing: 0.06em;
+  line-height: 1.3;
 }
 
 .questions__email,
@@ -326,6 +337,7 @@ p {
   display: flex;
   flex-direction: column;
   color: #f1cdb3;
+  margin: 1.5rem 0 0 -30px;
 }
 
 .footer__address,
@@ -369,25 +381,22 @@ p {
 .hero__wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  gap: 2.625rem;
+  gap: 2rem;
 }
 
 .hero__article {
-  padding-top: 2.1875rem;
   z-index: 2;
   flex: 0 0 38.33%;
+  margin-top: 10px;
 }
 .hero__article .title__hero {
   width: 67.4%;
-  font-family: "Georgia", serif;
-  font-size: 2.75rem;
-  line-height: 1.3;
   color: #fff;
-  padding-bottom: 2.625rem;
+  padding-bottom: 38px;
 }
 .hero__article .text__hero {
   color: #cdcdcd;
+  letter-spacing: -2%;
 }
 
 .text {
@@ -399,7 +408,7 @@ p {
 .button__hero {
   width: 13rem;
   height: 3.25rem;
-  margin-top: 2.625rem;
+  margin-top: 2.7rem;
 }
 
 .hero__img {
@@ -424,16 +433,12 @@ p {
 .about__img {
   flex: 0 0 24.2%;
 }
-.about__img .img__about {
-  padding-top: 1rem;
-}
-
 .about__article {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
-  flex: 0 0 36.2%;
-  padding-top: 1.5rem;
+  flex: 0 0 37%;
+  padding-top: 0.5rem;
 }
 
 .title__about {
@@ -447,6 +452,7 @@ p {
 
 .text__about {
   color: #4c4c4c;
+  letter-spacing: 0.01em;
 }
 
 .pets {
@@ -553,6 +559,7 @@ p {
 .donation__wrapper {
   display: flex;
   justify-content: center;
+  margin: 0 12px 0 10px;
   gap: 1.875rem;
 }
 
