@@ -215,6 +215,9 @@ p {
   transition: background-color 0.3s ease-in-out;
   cursor: pointer;
 }
+.card:hover .button--secondary {
+  background-color: #f1cdb3;
+}
 
 .card__img {
   width: 100%;
