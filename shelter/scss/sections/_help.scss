@@ -15,7 +15,7 @@
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
-	gap: $space-12 $space-21;
+	gap: $space-13 $space-21;
 	margin: 8px 0 0 -12px;
 }
 
@@ -52,4 +52,64 @@
 	font-size: $fs-md;
 	line-height: $lh-pets-title;
 	letter-spacing: 0.06em;
+}
+
+
+.donation {
+	background-color: $color-light-l;
+	padding: $space-16 0 $space-18 0;
+}
+
+.donation__wrapper {
+	display: flex;
+	justify-content: center;
+	// align-items: center;
+	gap: $space-6;
+}
+
+.donation__img {
+	flex: 0 0 42%;
+	padding-top: 9px;
+}
+
+.donation__content {
+	max-width: 380px;
+	max-height: 282px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: $space-4;
+	margin-right: $space-4;
+}
+.donation__title {}
+.donation__bank-name {
+	color: $color-dark-l;
+	font-size: $fs-sm;
+	line-height: $lh-pets-character;
+}
+.donation__card-number {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+	padding: 10px 15px;
+	background-color: $color-primary;
+	border-radius: 9px;
+	width: 350px;
+	height: 44px;
+}
+.card__icon {
+	width: 30px;
+	height: 23px;
+}
+.number__card {
+	color: $color-dark-l;
+	font-size: 20px;
+	// letter-spacing: 00.6em;
+	line-height: $lh-pets-title;
+}
+.donation__text {
+	font-size: $fs-xs;
+	color: $color-dark-m;
+	font-family: $font-secondary;
+	font-style: italic;
 }

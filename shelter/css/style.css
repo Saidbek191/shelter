@@ -508,7 +508,7 @@ p {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 3.5rem 7.5rem;
+  gap: 3.75rem 7.5rem;
   margin: 8px 0 0 -12px;
 }
 
@@ -543,6 +543,67 @@ p {
   font-size: 1.25rem;
   line-height: 1.15;
   letter-spacing: 0.06em;
+}
+
+.donation {
+  background-color: #f6f6f6;
+  padding: 5rem 0 5.625rem 0;
+}
+
+.donation__wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1.875rem;
+}
+
+.donation__img {
+  flex: 0 0 42%;
+  padding-top: 9px;
+}
+
+.donation__content {
+  max-width: 380px;
+  max-height: 282px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.25rem;
+  margin-right: 1.25rem;
+}
+
+.donation__bank-name {
+  color: #545454;
+  font-size: 0.9375rem;
+  line-height: 1.1;
+}
+
+.donation__card-number {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px 15px;
+  background-color: #f1cdb3;
+  border-radius: 9px;
+  width: 350px;
+  height: 44px;
+}
+
+.card__icon {
+  width: 30px;
+  height: 23px;
+}
+
+.number__card {
+  color: #545454;
+  font-size: 20px;
+  line-height: 1.15;
+}
+
+.donation__text {
+  font-size: 0.75rem;
+  color: #b2b2b2;
+  font-family: "Arial", sans-serif;
+  font-style: italic;
 }
 
 /*# sourceMappingURL=style.css.map */
