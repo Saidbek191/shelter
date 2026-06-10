@@ -31,6 +31,7 @@
 
 .pets__cards {
 	display: flex;
+	flex-wrap: wrap;
 	gap: $space-18;
 }
 
@@ -44,4 +45,91 @@
 	align-items: center;
 	justify-content: center;
 	margin: $space-13 auto 0 auto;
+}
+
+
+// our-pets.html
+
+.bg--white {
+	background-color: $color-light-xl;
+	padding: $space-6 0;
+	.logo--dark {
+		color: $color-dark-l;
+		font-size: $fs-xl;
+		letter-spacing: 0.06em;
+	}
+	.logo__subtitle--dark {
+		color: $color-dark-3xl;
+		font-family: $font-secondary;
+	}
+	.header__nav--dark {
+		// font-size: $fs-1base;
+		.header__list--dark {
+			display: flex;
+			gap: $space-5;
+			font-family: $font-secondary;
+			letter-spacing: 2%;
+			margin-right: 20px;
+			.header__item--dark {
+				color: $color-dark-l;
+				
+			}
+			.header__link--dark {
+				
+			}
+			.header__link--dark-active {
+				border-bottom: 3px solid $color-primary;
+			}
+		}
+	}
+}
+
+.pets__title-page {
+	margin: -8px 7px 0 4px;
+	letter-spacing: 5%;
+}
+
+.pets-page__slider {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	padding: $space-14 0;
+	gap: $space-6 $space-8;
+}
+
+.pets__pagination {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: $space-4;
+	margin-top: -7px;
+}
+
+.pagination__arrow, 
+.pagination__double-arrow {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: $color-dark-3xl;
+	font-size: $fs-md;
+	margin: 0;
+}
+
+.pets__pagination-current {
+	font-size: $fs-md;
+	letter-spacing: 0.06em;
+	line-height: $lh-pets-title;
+	width: 52px;
+	height: 52px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 100%;
+	background-color: $color-primary;
+	color: $color-dark-3xl;
+}
+
+.footer__wrapper-page {
+	margin: -7px -3px 0 0;
 }

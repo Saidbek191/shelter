@@ -312,7 +312,7 @@ p {
 .questions__title,
 .visit__title {
   color: #fff;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.05em;
   line-height: 1.3;
 }
 
@@ -347,7 +347,7 @@ p {
 .questions__link {
   font-size: 1.25rem;
   font-style: normal;
-  letter-spacing: 6%;
+  letter-spacing: 0.06em;
   line-height: 1.15;
 }
 
@@ -488,6 +488,7 @@ p {
 
 .pets__cards {
   display: flex;
+  flex-wrap: wrap;
   gap: 5.625rem;
 }
 
@@ -501,6 +502,83 @@ p {
   align-items: center;
   justify-content: center;
   margin: 3.75rem auto 0 auto;
+}
+
+.bg--white {
+  background-color: #fff;
+  padding: 1.875rem 0;
+}
+.bg--white .logo--dark {
+  color: #545454;
+  font-size: 2rem;
+  letter-spacing: 0.06em;
+}
+.bg--white .logo__subtitle--dark {
+  color: #292929;
+  font-family: "Arial", sans-serif;
+}
+.bg--white .header__nav--dark .header__list--dark {
+  display: flex;
+  gap: 1.5rem;
+  font-family: "Arial", sans-serif;
+  letter-spacing: 2%;
+  margin-right: 20px;
+}
+.bg--white .header__nav--dark .header__list--dark .header__item--dark {
+  color: #545454;
+}
+.bg--white .header__nav--dark .header__list--dark .header__link--dark-active {
+  border-bottom: 3px solid #f1cdb3;
+}
+
+.pets__title-page {
+  margin: -8px 7px 0 4px;
+  letter-spacing: 5%;
+}
+
+.pets-page__slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 4rem 0;
+  gap: 1.875rem 2.5rem;
+}
+
+.pets__pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: -7px;
+}
+
+.pagination__arrow,
+.pagination__double-arrow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #292929;
+  font-size: 1.25rem;
+  margin: 0;
+}
+
+.pets__pagination-current {
+  font-size: 1.25rem;
+  letter-spacing: 0.06em;
+  line-height: 1.15;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  background-color: #f1cdb3;
+  color: #292929;
+}
+
+.footer__wrapper-page {
+  margin: -7px -3px 0 0;
 }
 
 .help {
