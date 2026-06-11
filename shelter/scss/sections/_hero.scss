@@ -22,27 +22,21 @@
 .hero__wrapper {
 	display: flex;
 	align-items: center;
-	// justify-content: space-between;
 	gap: 2rem;
 }
 
 
 
 .hero__article {
-	// padding-top: $space-7;
 	z-index: 2;
 	flex: 0 0 38.33%;
 	margin-top: 10px;
 	.title__hero {
 		width: 67.40%;
-		// font-family: $font-main;
-		// font-size: $fs-2xl;
-		// line-height: $lh-title;
 		color: $color-light-xl;
 		padding-bottom: 38px;
 	}
 	.text__hero {
-		// margin-top: $space-1;
 		color: $color-dark-s;
 		letter-spacing: -2%;
 	}
@@ -58,6 +52,8 @@
 	width: 13rem;
 	height: $space-11;
 	margin-top: 2.7rem;
+	text-align: center;
+	padding-top: $space-3;
 }
 
 .hero__img {

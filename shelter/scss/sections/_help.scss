@@ -8,7 +8,7 @@
 .help__title {
 	text-align: center;
 	padding: 0 0 $space-10 0;
-	margin-left: -12px;
+	margin: -4px -14px 0 -34px;
 }
 
 .help__items {
@@ -16,7 +16,7 @@
 	justify-content: center;
 	flex-wrap: wrap;
 	gap: $space-13 $space-21;
-	margin: 8px 0 0 -12px;
+	margin: 4px 6px 0 -12px;
 }
 
 .help__first-row {
@@ -64,12 +64,15 @@
 	display: flex;
 	justify-content: center;
 	margin: 0 12px 0 10px;
-	gap: $space-6;
+	gap: $space-5;
 }
 
 .donation__img {
-	flex: 0 0 42%;
+	flex: 0 0 44%;
 	padding-top: 9px;
+	img {
+		margin-left: 18px;
+	}
 }
 
 .donation__content {
@@ -79,9 +82,12 @@
 	flex-direction: column;
 	justify-content: center;
 	gap: $space-4;
-	margin-right: $space-4;
+	margin: 3px 36px 0 0;
 }
-.donation__title {}
+
+.donation__title {
+	letter-spacing: 0.05em;
+}
 .donation__bank-name {
 	color: $color-dark-l;
 	font-size: $fs-sm;
@@ -90,12 +96,13 @@
 .donation__card-number {
 	display: flex;
 	align-items: center;
-	gap: 15px;
+	gap: 16px;
 	padding: 10px 15px;
 	background-color: $color-primary;
 	border-radius: 9px;
 	width: 350px;
 	height: 44px;
+	letter-spacing: 5%;
 }
 .card__icon {
 	width: 30px;
@@ -104,7 +111,6 @@
 .number__card {
 	color: $color-dark-l;
 	font-size: 20px;
-	// letter-spacing: 00.6em;
 	line-height: $lh-pets-title;
 }
 .donation__text {

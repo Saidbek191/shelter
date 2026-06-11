@@ -48,9 +48,17 @@ h1 {
 	line-height: $lh-title;
 }
 
+h2 {
+	font-size: $fs-1xl;
+	line-height: $lh-title;
+	letter-spacing: 0.06em;
+
+}
+
 h3 {
 	font-size: $fs-1xl;
 	line-height: $lh-title;
+	letter-spacing: 0.06em;
 }
 
 h4 {

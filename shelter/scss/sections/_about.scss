@@ -11,9 +11,6 @@
 }
 .about__img {
 	flex: 0 0 24.2%;
-	.img__about {
-		// padding-top: $space-3;
-	}
 }
 
 .about__article {
@@ -21,7 +18,7 @@
 	flex-direction: column;
 	gap: $space-5;
 	flex: 0 0 37%;
-	padding-top: 0.5rem;
+	padding-top: $space-2;
 }
 .title__about {
 	width: 85%;

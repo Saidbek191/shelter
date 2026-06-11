@@ -6,8 +6,6 @@
 }
 .footer__wrapper {
 	display: flex;
-	justify-content: space-between;
-	gap: $space-22;
 
 	img {
 		height: 100%;
@@ -21,6 +19,10 @@
 	gap: $space-8;
 	color: $color-primary;
 	margin-top: $space-5;
+	max-width: 300px;
+}
+.content-wrapper {
+	display: flex;
 }
 .questions__title,
 .visit__title {
@@ -36,6 +38,22 @@
 	align-items: center;
 	gap: $space-4;
 }
+
+.questions__email {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.questions__email,
+.questions__phone {
+	font-size: $fs-md;
+	letter-spacing: 0.06em;
+	line-height: $lh-pets-title;
+}
+
 .questions__icon {
 	width: $space-8;
 	height: $space-6;
@@ -45,13 +63,13 @@
 	align-items: center;
 	gap: $space-4;
 }
-.questions__link {}
+
 
 .visit {
 	display: flex;
 	flex-direction: column;
 	color: $color-primary;
-	margin: $space-5 0 0 -30px;
+	margin: $space-5 124px 0 auto;
 }
 
 .footer__address,
@@ -60,6 +78,7 @@
 	font-style: normal;
 	letter-spacing: 0.06em;
 	line-height: $lh-pets-title;
+	max-width: 300px;
 }
 .visit__boston {
 	padding-top: $space-6;
@@ -68,8 +87,6 @@
 	padding-top: $space-7;
 }
 .visit__icon {
-	svg {
-		width: $space-5;
-		height: $space-6;
-	}
+	width: 22px;
+	height: 32px;
 }

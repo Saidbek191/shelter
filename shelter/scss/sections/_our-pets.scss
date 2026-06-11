@@ -6,7 +6,7 @@
 	flex-direction: column;
 	justify-content: center;
 	background-color: $color-light-l;
-	padding: $space-16 0 $space-19 0;
+	padding: 5.2rem 0 $space-19 0;
 	margin: 0 16px 0 0;
 }
 
@@ -48,11 +48,11 @@
 }
 
 
-// our-pets.html
+// OUR PETS PAGE
 
 .bg--white {
 	background-color: $color-light-xl;
-	padding: $space-6 0;
+	padding: 0 0 $space-6 0;
 	.logo--dark {
 		color: $color-dark-l;
 		font-size: $fs-xl;
@@ -63,19 +63,18 @@
 		font-family: $font-secondary;
 	}
 	.header__nav--dark {
-		// font-size: $fs-1base;
 		.header__list--dark {
 			display: flex;
 			gap: $space-5;
 			font-family: $font-secondary;
-			letter-spacing: 2%;
-			margin-right: 20px;
+			margin-right: 15px;
 			.header__item--dark {
 				color: $color-dark-l;
 				
 			}
 			.header__link--dark {
-				
+				letter-spacing: 0.03em;
+				line-height: $lh-pets-title;
 			}
 			.header__link--dark-active {
 				border-bottom: 3px solid $color-primary;
@@ -94,8 +93,8 @@
 	justify-content: center;
 	align-items: center;
 	flex-wrap: wrap;
-	padding: $space-14 0;
-	gap: $space-6 $space-8;
+	margin: 3.7rem 0;
+	gap: $space-5 $space-8;
 }
 
 .pets__pagination {
@@ -103,7 +102,7 @@
 	justify-content: center;
 	align-items: center;
 	gap: $space-4;
-	margin-top: -7px;
+	margin-top: 1px;
 }
 
 .pagination__arrow, 
@@ -132,4 +131,6 @@
 
 .footer__wrapper-page {
 	margin: -7px -3px 0 0;
+	justify-content: space-between;
+
 }
