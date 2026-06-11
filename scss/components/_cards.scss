@@ -13,11 +13,14 @@
 	
 	background-color: $color-light-s;
 	border-radius: $space-1;
-	transition: background-color 0.3s ease-in-out;
+	transition: background-color 0.3s ease-in-out box-shadow 0.8s ease;
 	cursor: pointer;
 	&:hover .button--secondary {
-	background-color: $color-primary;
+		background-color: $color-primary;
 }
+	&:hover {
+		box-shadow: 0 4px 5px 1px rgba(24, 24, 25, 0.2);
+	}
 }
 
 .card__img {

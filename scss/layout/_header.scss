@@ -43,7 +43,7 @@
 		gap: 2rem;
 		margin: 0 20px 6px 0;
 	}
-
+	
 	.header__item {
 		color: $color-dark-s;
 		line-height: $lh-base;
@@ -51,6 +51,13 @@
 		transition: border-bottom 0.2s ease-in-out;
 		&:hover {
 			border-bottom: 2px solid $color-primary;
+		}
+		.header__link--active {
+			padding-bottom: 2px;
+			border-bottom: 2px solid $color-primary;
+			&:hover {
+				border-bottom: 2px solid transparent;
+			}
 		}
 	}
 }

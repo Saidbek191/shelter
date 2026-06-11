@@ -219,11 +219,14 @@ p {
   flex-direction: column;
   background-color: #fafafa;
   border-radius: 0.625rem;
-  transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out box-shadow 0.8s ease;
   cursor: pointer;
 }
 .card:hover .button--secondary {
   background-color: #f1cdb3;
+}
+.card:hover {
+  box-shadow: 0 4px 5px 1px rgba(24, 24, 25, 0.2);
 }
 
 .card__img {
@@ -292,6 +295,13 @@ p {
 }
 .header__nav .header__item:hover {
   border-bottom: 2px solid #f1cdb3;
+}
+.header__nav .header__item .header__link--active {
+  padding-bottom: 2px;
+  border-bottom: 2px solid #f1cdb3;
+}
+.header__nav .header__item .header__link--active:hover {
+  border-bottom: 2px solid transparent;
 }
 
 .footer {
