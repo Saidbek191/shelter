@@ -8,6 +8,38 @@
 	align-items: center;
 	justify-content: space-between;
 	height: $space-18;
+	.burger-menu {
+		max-height: $space-5;
+		display: none;
+		position: relative;
+		.burger__line {
+			position: absolute;
+			top: -3px;
+			left: 16px;
+			width: 30px;
+			height: 2px;
+			background-color: $color-primary;
+			transition: all 0.3s ease-in-out;
+			&::before, &::after {
+				content: "";
+				width: 30px;
+				height: 2px;
+				background-color: $color-primary;
+				position: absolute;
+				left: 0;
+				transition: all 0.3s ease-in-out;
+			}
+			&::before {
+				top: -9px;
+			}
+			&::after {
+				top: 9px;
+			}
+		}
+		@include respond(mobile) {
+			display: block;
+		}
+	}
 }
 
 
@@ -18,7 +50,6 @@
 	align-items: center;
 	gap: $space-1;
 	cursor: default;
-	
 	.logo {
 		font-size: $fs-xl;
 		line-height: $lh-pets-character;
@@ -42,7 +73,11 @@
 		display: flex;
 		gap: 2rem;
 		margin: 0 20px 6px 0;
+		@include respond(mobile) {
+			display: none;
+		}
 	}
+
 	
 	.header__item {
 		color: $color-dark-s;
