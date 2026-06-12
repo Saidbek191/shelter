@@ -533,6 +533,11 @@ p {
   font-size: 0.9375rem;
   line-height: 1.6;
 }
+@media only screen and (max-width: 768px) {
+  .text {
+    letter-spacing: -1.5%;
+  }
+}
 
 .button__hero {
   width: 13rem;
@@ -582,31 +587,70 @@ p {
   justify-content: center;
   gap: 7.5rem;
 }
-
+@media only screen and (max-width: 768px) {
+  .about__wrapper {
+    align-items: center;
+    flex-direction: column-reverse;
+    gap: 0;
+  }
+}
 .about__img {
   flex: 0 0 24.2%;
 }
+@media only screen and (max-width: 768px) {
+  .about__img {
+    margin: 72px 0 0 -24px;
+  }
+}
 
 .about__article {
+  max-width: 430px;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
   flex: 0 0 37%;
   padding-top: 0.75rem;
 }
-
+@media only screen and (max-width: 768px) {
+  .about__article {
+    padding: 0;
+    margin: -16px 0 0 -10px;
+  }
+}
 .title__about {
-  width: 85%;
+  max-width: 370px;
+  width: 100%;
+}
+@media only screen and (max-width: 768px) {
+  .title__about {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .title__about {
+    font-size: 25px;
+    text-align: center;
+  }
 }
 
 .title {
   color: #545454;
   letter-spacing: 6%;
 }
+@media only screen and (max-width: 768px) {
+  .title {
+    letter-spacing: 4%;
+  }
+}
 
 .text__about {
   color: #4c4c4c;
   letter-spacing: 0.01em;
+}
+@media only screen and (max-width: 768px) {
+  .text__about {
+    letter-spacing: -1.5%;
+  }
 }
 
 .pets {

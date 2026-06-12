@@ -84,6 +84,9 @@
 	font-family: $font-secondary;
 	font-size: $fs-sm;
 	line-height: $lh-base;
+	@include respond (tablet) {
+		letter-spacing: -1.5%;
+	}
 }
 
 .button__hero {
