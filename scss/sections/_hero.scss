@@ -45,7 +45,7 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin: 60px 0 0 -24px;
+		margin: 57px 0 0 -28px;
 	}
 	@include respond (mobile) {
 		width: 100%;
@@ -84,9 +84,6 @@
 	font-family: $font-secondary;
 	font-size: $fs-sm;
 	line-height: $lh-base;
-	@include respond (tablet) {
-		letter-spacing: -1.5%;
-	}
 }
 
 .button__hero {

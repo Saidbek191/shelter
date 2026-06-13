@@ -14,13 +14,19 @@
 		gap: 0;
 	}
 	@include respond (mobile) {
-		
+		// text-align: center;
 	}
 }
-.about__img {
+.about__img img{
 	flex: 0 0 24.2%;
 	@include respond (tablet) {
-		margin: 72px 0 0 -24px;
+		margin: 50px 0 0 -15px;
+	}
+	@include respond (mobile) {
+		display: block;
+		height: auto;
+		width: 90%;
+		margin: 42px auto 0 auto;
 	}
 }
 
@@ -33,39 +39,49 @@
 	padding-top: $space-2;
 	@include respond (tablet) {
 		padding: 0;
-		margin: -16px 0 0 -10px;
+		// margin: -16px 0 0 -10px;
 	}
 	@include respond (mobile) {
-		// margin: 0;
-		// margin-top: 45px;
+		// height: 100%	;
+		text-align: justify;
+		margin: -17px 0 0 4px
 	}
 }
+.title {
+	color: $color-dark-l;
+	letter-spacing: 6%;
+}
+
 .title__about {
 	max-width: 370px;
 	width: 100%;
 	@include respond (tablet) {
 		width: 80%;
-		// margin: -26px 0 0 -12px;
+		margin: -24px 0 0 -12px;
+		letter-spacing: 4%;
 	}
 	@include respond (mobile) {
-		// min-width: 350px;
+		// max-width: 370px;
+		width: 100%;
 		font-size: 25px;
 		text-align: center;
+		line-height: 130%;
+		padding: 0 0 0 20px;
+		// margin: -24px 0 0 -12px;
 	}
 }
 
-.title {
-	color: $color-dark-l;
-	letter-spacing: 6%;
-	@include respond (tablet) {
-		letter-spacing: 4%;
-	}
-}
 
 .text__about {
 	color: $color-dark-xl;
 	letter-spacing: 0.01em;
 	@include respond (tablet) {
-		letter-spacing: -1.5%;
+		letter-spacing: 1%;
+		margin: -4px 0 0 -12px;
+	}
+	@include respond (mobile) {
+		// max-width: 270px;
+		width: 100%;
+		// letter-spacing: -1.5%;
 	}
 }

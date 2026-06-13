@@ -53,9 +53,23 @@
 .pets__arrow--prev {
 	margin-right: $space-11;
 	padding-bottom: 5px;
+	@include respond (tablet) {
+		margin-right: $space-2;
+	}
+	@include respond (mobile) {
+		order: 2;
+		margin: 20px 68px 20px -10px;
+	}
 }
 
 .pets__arrow--next {
 	margin-left: $space-11;
 	padding-top: 0;
+	@include respond (tablet) {
+		margin-left: $space-2;
+	}
+	@include respond (mobile) {
+		order: 3;
+		margin-top: 20px 0;
+	}
 }
