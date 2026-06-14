@@ -22,7 +22,8 @@
 	letter-spacing: 0.06em;
 	line-height: 1.2;
 	@include respond (tablet) {
-		margin: 12px 0 0 0;
+		margin: -2px 0 0 0;
+		letter-spacing: 0.04em;
 	}
 	@include respond (mobile) {
 		font-size: 25px;

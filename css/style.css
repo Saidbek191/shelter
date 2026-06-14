@@ -257,7 +257,7 @@ p {
 }
 @media only screen and (max-width: 375px) {
   .card__img {
-    margin: -19px 8px 9px 0;
+    margin: -12px 8px 9px 0;
   }
 }
 
@@ -621,7 +621,7 @@ p {
 }
 @media only screen and (max-width: 768px) {
   .about__img img {
-    margin: 50px 0 0 -15px;
+    margin: 54px 9px 0 -15px;
   }
 }
 @media only screen and (max-width: 375px) {
@@ -629,12 +629,11 @@ p {
     display: block;
     height: auto;
     width: 90%;
-    margin: 42px auto 0 auto;
+    margin: 20px auto 0 auto;
   }
 }
 
 .about__article {
-  max-width: 430px;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -644,10 +643,12 @@ p {
 @media only screen and (max-width: 768px) {
   .about__article {
     padding: 0;
+    max-width: 430px;
   }
 }
 @media only screen and (max-width: 375px) {
   .about__article {
+    max-width: 430px;
     text-align: justify;
     margin: -17px 0 0 4px;
   }
@@ -691,6 +692,7 @@ p {
 }
 @media only screen and (max-width: 375px) {
   .text__about {
+    margin: 0;
     width: 100%;
   }
 }
@@ -722,7 +724,8 @@ p {
 }
 @media only screen and (max-width: 768px) {
   .pets__title {
-    margin: 12px 0 0 0;
+    margin: -2px 0 0 0;
+    letter-spacing: 0.04em;
   }
 }
 @media only screen and (max-width: 375px) {
@@ -893,46 +896,92 @@ p {
 .help {
   margin: 5rem 0 6.25rem 0;
 }
+@media only screen and (max-width: 375px) {
+  .help {
+    margin: 40px 0;
+  }
+}
 
 .help__title {
   text-align: center;
   padding: 0 0 3.125rem 0;
   margin: -4px -14px 0 -34px;
 }
+@media only screen and (max-width: 768px) {
+  .help__title {
+    margin: -6px -8px 0 -36px;
+    letter-spacing: 0.04em;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .help__title {
+    font-size: 25px;
+    margin: 0px 0px -10px 0px;
+  }
+}
 
 .help__items {
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 3.75rem 7.5rem;
   margin: 4px 6px 0 -12px;
 }
-
-.help__first-row {
-  display: flex;
-  justify-content: center;
-  gap: 7.5rem;
-  margin: -4px;
+@media only screen and (max-width: 768px) {
+  .help__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2.8rem;
+    margin: 3px 58px 0 29px;
+  }
+  .help__items .help__first-row,
+  .help__items .help__second-row {
+    display: contents;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .help__items {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin: 0;
+  }
 }
 
+.help__first-row,
 .help__second-row {
   display: flex;
   justify-content: center;
   gap: 7.5rem;
-  margin: -10px 0 0 0;
+  margin: -2px 0 0 0;
 }
 
 .help__item {
   display: flex;
   flex-direction: column;
-  gap: 1.875rem;
+  gap: 1.5rem;
   text-align: center;
   color: #545454;
+}
+@media only screen and (max-width: 768px) {
+  .help__item {
+    gap: 1.8rem;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .help__item {
+    gap: 13px;
+  }
 }
 
 .item__img svg {
   width: 60px;
   height: 60px;
+}
+@media only screen and (max-width: 375px) {
+  .item__img svg {
+    width: 50px;
+    height: 50px;
+  }
 }
 
 .item__title {
@@ -940,10 +989,21 @@ p {
   line-height: 1.15;
   letter-spacing: 0.06em;
 }
+@media only screen and (max-width: 375px) {
+  .item__title {
+    font-size: 15px;
+    width: 130px;
+  }
+}
 
 .donation {
   background-color: #f6f6f6;
   padding: 5rem 0 5.625rem 0;
+}
+@media only screen and (max-width: 375px) {
+  .donation {
+    padding: 50px 40px;
+  }
 }
 
 .donation__wrapper {
@@ -952,6 +1012,18 @@ p {
   margin: 0 12px 0 10px;
   gap: 1.5rem;
 }
+@media only screen and (max-width: 768px) {
+  .donation__wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+    gap: 60px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .donation__wrapper {
+    gap: 42px;
+  }
+}
 
 .donation__img {
   flex: 0 0 44%;
@@ -959,6 +1031,16 @@ p {
 }
 .donation__img img {
   margin-left: 18px;
+}
+@media only screen and (max-width: 768px) {
+  .donation__img img {
+    margin: -10px 0 0 -13px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .donation__img img {
+    margin: 0;
+  }
 }
 
 .donation__content {
@@ -970,15 +1052,45 @@ p {
   gap: 1.25rem;
   margin: 3px 36px 0 0;
 }
+@media only screen and (max-width: 768px) {
+  .donation__content {
+    margin: -3px 0 0 -24px;
+    gap: 18px;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .donation__content {
+    margin: 0;
+    gap: 20px;
+  }
+}
 
 .donation__title {
   letter-spacing: 0.05em;
+}
+@media only screen and (max-width: 768px) {
+  .donation__title {
+    letter-spacing: 0.04em;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .donation__title {
+    font-size: 25px;
+    text-align: center;
+  }
 }
 
 .donation__bank-name {
   color: #545454;
   font-size: 0.9375rem;
   line-height: 1.1;
+}
+@media only screen and (max-width: 375px) {
+  .donation__bank-name {
+    text-align: center;
+    font-size: 15px;
+    letter-spacing: 0;
+  }
 }
 
 .donation__card-number {
@@ -992,6 +1104,11 @@ p {
   height: 44px;
   letter-spacing: 5%;
 }
+@media only screen and (max-width: 375px) {
+  .donation__card-number {
+    width: 282px;
+  }
+}
 
 .card__icon {
   width: 30px;
@@ -1002,6 +1119,11 @@ p {
   color: #545454;
   font-size: 20px;
   line-height: 1.15;
+}
+@media only screen and (max-width: 375px) {
+  .number__card {
+    font-size: 15px;
+  }
 }
 
 .donation__text {

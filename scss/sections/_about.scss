@@ -20,18 +20,17 @@
 .about__img img{
 	flex: 0 0 24.2%;
 	@include respond (tablet) {
-		margin: 50px 0 0 -15px;
+		margin: 54px 9px 0 -15px;
 	}
 	@include respond (mobile) {
 		display: block;
 		height: auto;
 		width: 90%;
-		margin: 42px auto 0 auto;
+		margin: 20px auto 0 auto;
 	}
 }
 
 .about__article {
-	max-width: 430px;
 	display: flex;
 	flex-direction: column;
 	gap: $space-5;
@@ -39,9 +38,11 @@
 	padding-top: $space-2;
 	@include respond (tablet) {
 		padding: 0;
+		max-width: 430px;
 		// margin: -16px 0 0 -10px;
 	}
 	@include respond (mobile) {
+		max-width: 430px;
 		// height: 100%	;
 		text-align: justify;
 		margin: -17px 0 0 4px
@@ -80,8 +81,7 @@
 		margin: -4px 0 0 -12px;
 	}
 	@include respond (mobile) {
-		// max-width: 270px;
+		margin: 0;
 		width: 100%;
-		// letter-spacing: -1.5%;
 	}
 }
