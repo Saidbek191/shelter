@@ -2,33 +2,64 @@
 @use '../abstracts/variables' as *;
 
 .footer {
-	padding-top: $space-8;
+	padding: $space-8 0 0 0;
+	@include respond (mobile) {
+		padding: 30px 0 0 0;
+	}
 }
 .footer__wrapper {
 	display: flex;
+	gap: 114px;
+	margin-top: 1rem;
+	@include respond (tablet) {
+		flex-direction: column;
+		align-items: center;
+		gap: 65px;
+	}
+	@include respond (mobile) {
+	}
+}
 
-	img {
-		height: 100%;
-		padding: 8px 17px 0 0;
+.footer__content-wrapper {
+	display: flex;
+	// margin-top: 1rem;
+	gap: 136px;
+	@include respond (tablet) {
+		gap: 35px;
+		padding: 0 0 30px 13px;
+		margin: -25px 0 0 0;
+	}
+	@include respond (mobile) {
+		flex-direction: column;
+		align-items: center;
+		gap: 40px;
+		padding: 0;
+		margin: -35px 0 0 -2px;
 	}
 }
 
 .questions {
 	display: flex;
 	flex-direction: column;
-	gap: $space-8;
+	gap: 2.4rem;
 	color: $color-primary;
-	margin-top: $space-5;
 	max-width: 300px;
+	@include respond (mobile) {
+		align-items: center;
+	}
 }
-.content-wrapper {
-	display: flex;
-}
+// .content-wrapper {
+// 	display: flex;
+// }
 .questions__title,
 .visit__title {
 	color: $color-light-xl;
-	letter-spacing: 0.05em;
+	letter-spacing: 0.04em;
 	line-height: $lh-title;
+	@include respond (mobile) {
+		font-size: 25px;
+		text-align: center;
+	}
 }
 .questions__email, 
 .questions__phone,
@@ -40,11 +71,11 @@
 }
 
 .questions__email {
-  display: flex;
-  align-items: center;
+  // display: flex;
+  // align-items: center;
   gap: 20px;
-  text-decoration: none;
-  color: inherit;
+  // text-decoration: none;
+  // color: inherit;
 }
 
 .questions__email,
@@ -55,21 +86,25 @@
 }
 
 .questions__icon {
-	width: $space-8;
-	height: $space-6;
+	width: 40px;
+	height: 32px;
 }
-.questions__phone {
-	display: flex;
-	align-items: center;
-	gap: $space-4;
-}
+// .questions__phone {
+	// display: flex;
+	// align-items: center;
+	// gap: $space-4;
+// }
 
 
 .visit {
 	display: flex;
 	flex-direction: column;
 	color: $color-primary;
-	margin: $space-5 124px 0 auto;
+	// margin: $space-5 124px 0 auto;
+	@include respond (mobile) {
+		gap: 40px;
+		padding: 0;
+	}
 }
 
 .footer__address,
@@ -78,15 +113,28 @@
 	font-style: normal;
 	letter-spacing: 0.06em;
 	line-height: $lh-pets-title;
-	max-width: 300px;
+	// max-width: 300px;
+	width: 100%;
+	@include respond (mobile) {
+		letter-spacing: 0.03em;
+	}
 }
 .visit__boston {
-	padding-top: $space-6;
+	// padding-top: 1.7rem;
 }
 .visit__london {
-	padding-top: $space-7;
+	// padding-top: 2rem;
 }
 .visit__icon {
 	width: 22px;
 	height: 32px;
 }
+
+.footer__img {
+		height: 100%;
+		margin: -31px 0 0 -30px;
+		@include respond (mobile) {
+			width: 92%;
+			margin: -28px 0 0 0;
+		}
+	}

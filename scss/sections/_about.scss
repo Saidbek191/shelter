@@ -3,6 +3,9 @@
 
 .about {
 	margin: $space-16 0 $space-19 0;
+	@include respond (mobile) {
+		margin: 54px 0 $space-19 0;
+	}
 }
 .about__wrapper {
 	display: flex;
@@ -20,7 +23,7 @@
 .about__img img{
 	flex: 0 0 24.2%;
 	@include respond (tablet) {
-		margin: 54px 9px 0 -15px;
+		margin: 53px 10px 0 -15px;
 	}
 	@include respond (mobile) {
 		display: block;
@@ -56,10 +59,10 @@
 .title__about {
 	max-width: 370px;
 	width: 100%;
+	letter-spacing: 4%;
 	@include respond (tablet) {
-		width: 80%;
-		margin: -24px 0 0 -12px;
-		letter-spacing: 4%;
+		// width: 80%;
+		margin: 4px 0 0 -12px;
 	}
 	@include respond (mobile) {
 		// max-width: 370px;
@@ -78,7 +81,7 @@
 	letter-spacing: 0.01em;
 	@include respond (tablet) {
 		letter-spacing: 1%;
-		margin: -4px 0 0 -12px;
+		margin: -2px 0 0 -12px;
 	}
 	@include respond (mobile) {
 		margin: 0;

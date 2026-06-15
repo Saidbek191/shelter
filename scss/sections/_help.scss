@@ -12,7 +12,8 @@
 .help__title {
 	text-align: center;
 	padding: 0 0 $space-10 0;
-	margin: -4px -14px 0 -34px;
+	margin: -1px -10px 0 -34px;
+	letter-spacing: 0.05em;
 	@include respond (tablet) {
 	margin: -6px -8px 0 -36px;
 	letter-spacing: 0.04em;
@@ -29,8 +30,8 @@
 	display: flex;
 	justify-content: center;
 	flex-direction: column;
-	gap: $space-13 $space-21;
-	margin: 4px 6px 0 -12px;
+	gap: 3.6rem $space-21;
+	margin: 7px 14px 0 -14px;
 	@include respond (tablet) {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
@@ -113,9 +114,9 @@
 
 .donation {
 	background-color: $color-light-l;
-	padding: $space-16 0 $space-18 0;
+	padding: $space-16 0 6rem 0;
 	@include respond (mobile) {
-		padding: 50px 40px;
+		margin: -33px 0px;
 	}
 }
 
@@ -139,16 +140,15 @@
 .donation__img {
 	flex: 0 0 44%;
 	padding-top: 9px;
-	img {
-		margin-left: 18px;
+		margin-left: 16px;
 		@include respond (tablet) {
 			margin: -10px 0 0 -13px	;
 		}
 		@include respond (mobile) {
 			margin: 0;
+			padding: 0;
 		}
 	}
-}
 
 .donation__content {
 	max-width: 380px;
@@ -157,19 +157,19 @@
 	flex-direction: column;
 	justify-content: center;
 	gap: $space-4;
-	margin: 3px 36px 0 0;
+	margin: 2px 38px 0 0;
 	@include respond (tablet) {
 		margin: -3px 0 0 -24px;
 		gap: 18px;
 	}
 	@include respond (mobile) {
 		margin: 0;
-		gap: 20px;
+		gap: 22px;
 	}
 }
 
 .donation__title {
-	letter-spacing: 0.05em;
+	letter-spacing: 0.04em;
 	@include respond (tablet) {
 		letter-spacing: 0.04em;
 	}

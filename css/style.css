@@ -371,35 +371,72 @@ p {
 }
 
 .footer {
-  padding-top: 2.5rem;
+  padding: 2.5rem 0 0 0;
+}
+@media only screen and (max-width: 375px) {
+  .footer {
+    padding: 30px 0 0 0;
+  }
 }
 
 .footer__wrapper {
   display: flex;
+  gap: 114px;
+  margin-top: 1rem;
 }
-.footer__wrapper img {
-  height: 100%;
-  padding: 8px 17px 0 0;
+@media only screen and (max-width: 768px) {
+  .footer__wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 65px;
+  }
+}
+.footer__content-wrapper {
+  display: flex;
+  gap: 136px;
+}
+@media only screen and (max-width: 768px) {
+  .footer__content-wrapper {
+    gap: 35px;
+    padding: 0 0 30px 13px;
+    margin: -25px 0 0 0;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .footer__content-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+    padding: 0;
+    margin: -35px 0 0 -2px;
+  }
 }
 
 .questions {
   display: flex;
   flex-direction: column;
-  gap: 2.5rem;
+  gap: 2.4rem;
   color: #f1cdb3;
-  margin-top: 1.5rem;
   max-width: 300px;
 }
-
-.content-wrapper {
-  display: flex;
+@media only screen and (max-width: 375px) {
+  .questions {
+    align-items: center;
+  }
 }
 
 .questions__title,
 .visit__title {
   color: #fff;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
   line-height: 1.3;
+}
+@media only screen and (max-width: 375px) {
+  .questions__title,
+  .visit__title {
+    font-size: 25px;
+    text-align: center;
+  }
 }
 
 .questions__email,
@@ -412,11 +449,7 @@ p {
 }
 
 .questions__email {
-  display: flex;
-  align-items: center;
   gap: 20px;
-  text-decoration: none;
-  color: inherit;
 }
 
 .questions__email,
@@ -427,21 +460,20 @@ p {
 }
 
 .questions__icon {
-  width: 2.5rem;
-  height: 1.875rem;
-}
-
-.questions__phone {
-  display: flex;
-  align-items: center;
-  gap: 1.25rem;
+  width: 40px;
+  height: 32px;
 }
 
 .visit {
   display: flex;
   flex-direction: column;
   color: #f1cdb3;
-  margin: 1.5rem 124px 0 auto;
+}
+@media only screen and (max-width: 375px) {
+  .visit {
+    gap: 40px;
+    padding: 0;
+  }
 }
 
 .footer__address,
@@ -450,20 +482,29 @@ p {
   font-style: normal;
   letter-spacing: 0.06em;
   line-height: 1.15;
-  max-width: 300px;
+  width: 100%;
 }
-
-.visit__boston {
-  padding-top: 1.875rem;
-}
-
-.visit__london {
-  padding-top: 2.1875rem;
+@media only screen and (max-width: 375px) {
+  .footer__address,
+  .questions__link {
+    letter-spacing: 0.03em;
+  }
 }
 
 .visit__icon {
   width: 22px;
   height: 32px;
+}
+
+.footer__img {
+  height: 100%;
+  margin: -31px 0 0 -30px;
+}
+@media only screen and (max-width: 375px) {
+  .footer__img {
+    width: 92%;
+    margin: -28px 0 0 0;
+  }
 }
 
 .bg--gradient {
@@ -589,8 +630,8 @@ p {
 }
 @media only screen and (max-width: 768px) {
   .hero__img .img__hero {
-    width: 80%;
-    margin: -26px 0 0 132px;
+    width: 76%;
+    margin: -25px 0 0 140px;
   }
 }
 @media only screen and (max-width: 375px) {
@@ -602,6 +643,11 @@ p {
 
 .about {
   margin: 5rem 0 6.25rem 0;
+}
+@media only screen and (max-width: 375px) {
+  .about {
+    margin: 54px 0 6.25rem 0;
+  }
 }
 
 .about__wrapper {
@@ -621,7 +667,7 @@ p {
 }
 @media only screen and (max-width: 768px) {
   .about__img img {
-    margin: 54px 9px 0 -15px;
+    margin: 53px 10px 0 -15px;
   }
 }
 @media only screen and (max-width: 375px) {
@@ -662,12 +708,11 @@ p {
 .title__about {
   max-width: 370px;
   width: 100%;
+  letter-spacing: 4%;
 }
 @media only screen and (max-width: 768px) {
   .title__about {
-    width: 80%;
-    margin: -24px 0 0 -12px;
-    letter-spacing: 4%;
+    margin: 4px 0 0 -12px;
   }
 }
 @media only screen and (max-width: 375px) {
@@ -687,7 +732,7 @@ p {
 @media only screen and (max-width: 768px) {
   .text__about {
     letter-spacing: 1%;
-    margin: -4px 0 0 -12px;
+    margin: -2px 0 0 -12px;
   }
 }
 @media only screen and (max-width: 375px) {
@@ -702,8 +747,8 @@ p {
   flex-direction: column;
   justify-content: center;
   background-color: #f6f6f6;
-  padding: 5.2rem 0 6.25rem 0;
-  margin: 0 16px 0 0;
+  padding: 5rem 0 6.25rem 0;
+  margin: 0 24px 0 0;
 }
 @media only screen and (max-width: 768px) {
   .pets {
@@ -719,7 +764,7 @@ p {
 
 .pets__title {
   text-align: center;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.04em;
   line-height: 1.2;
 }
 @media only screen and (max-width: 768px) {
@@ -905,7 +950,8 @@ p {
 .help__title {
   text-align: center;
   padding: 0 0 3.125rem 0;
-  margin: -4px -14px 0 -34px;
+  margin: -1px -10px 0 -34px;
+  letter-spacing: 0.05em;
 }
 @media only screen and (max-width: 768px) {
   .help__title {
@@ -924,8 +970,8 @@ p {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  gap: 3.75rem 7.5rem;
-  margin: 4px 6px 0 -12px;
+  gap: 3.6rem 7.5rem;
+  margin: 7px 14px 0 -14px;
 }
 @media only screen and (max-width: 768px) {
   .help__items {
@@ -998,11 +1044,11 @@ p {
 
 .donation {
   background-color: #f6f6f6;
-  padding: 5rem 0 5.625rem 0;
+  padding: 5rem 0 6rem 0;
 }
 @media only screen and (max-width: 375px) {
   .donation {
-    padding: 50px 40px;
+    margin: -33px 0px;
   }
 }
 
@@ -1028,18 +1074,17 @@ p {
 .donation__img {
   flex: 0 0 44%;
   padding-top: 9px;
-}
-.donation__img img {
-  margin-left: 18px;
+  margin-left: 16px;
 }
 @media only screen and (max-width: 768px) {
-  .donation__img img {
+  .donation__img {
     margin: -10px 0 0 -13px;
   }
 }
 @media only screen and (max-width: 375px) {
-  .donation__img img {
+  .donation__img {
     margin: 0;
+    padding: 0;
   }
 }
 
@@ -1050,7 +1095,7 @@ p {
   flex-direction: column;
   justify-content: center;
   gap: 1.25rem;
-  margin: 3px 36px 0 0;
+  margin: 2px 38px 0 0;
 }
 @media only screen and (max-width: 768px) {
   .donation__content {
@@ -1061,12 +1106,12 @@ p {
 @media only screen and (max-width: 375px) {
   .donation__content {
     margin: 0;
-    gap: 20px;
+    gap: 22px;
   }
 }
 
 .donation__title {
-  letter-spacing: 0.05em;
+  letter-spacing: 0.04em;
 }
 @media only screen and (max-width: 768px) {
   .donation__title {

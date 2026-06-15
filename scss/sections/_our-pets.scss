@@ -6,8 +6,8 @@
 	flex-direction: column;
 	justify-content: center;
 	background-color: $color-light-l;
-	padding: 5.2rem 0 $space-19 0;
-	margin: 0 16px 0 0;
+	padding: 5rem 0 $space-19 0;
+	margin: 0 24px 0 0;
 	@include respond (tablet) {
 		margin: 0 25px 0 0;
 	}
@@ -19,7 +19,7 @@
 
 .pets__title {
 	text-align: center;
-	letter-spacing: 0.06em;
+	letter-spacing: 0.04em;
 	line-height: 1.2;
 	@include respond (tablet) {
 		margin: -2px 0 0 0;
