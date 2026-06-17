@@ -18,12 +18,13 @@
 	}
 	@include respond (mobile) {
 		// text-align: center;
+		gap: 24px;
 	}
 }
 .about__img img{
 	flex: 0 0 24.2%;
 	@include respond (tablet) {
-		margin: 53px 10px 0 -15px;
+		margin: 80px 14px 0 -10px;
 	}
 	@include respond (mobile) {
 		display: block;
@@ -42,13 +43,14 @@
 	@include respond (tablet) {
 		padding: 0;
 		max-width: 430px;
+		gap: 1.6rem;
 		// margin: -16px 0 0 -10px;
 	}
 	@include respond (mobile) {
 		max-width: 430px;
 		// height: 100%	;
 		text-align: justify;
-		margin: -17px 0 0 4px
+		margin: -15px 0 0 4px
 	}
 }
 .title {
@@ -62,15 +64,15 @@
 	letter-spacing: 4%;
 	@include respond (tablet) {
 		// width: 80%;
-		margin: 4px 0 0 -12px;
+		margin: -1px 0 0 -10px;
 	}
 	@include respond (mobile) {
 		// max-width: 370px;
-		width: 100%;
+		// width: 100%;
 		font-size: 25px;
 		text-align: center;
-		line-height: 130%;
-		padding: 0 0 0 20px;
+		// line-height: 130%;
+		padding: 0 0 0 15px;
 		// margin: -24px 0 0 -12px;
 	}
 }
@@ -80,7 +82,7 @@
 	color: $color-dark-xl;
 	letter-spacing: 0.01em;
 	@include respond (tablet) {
-		letter-spacing: 1%;
+		letter-spacing: 0%;
 		margin: -2px 0 0 -12px;
 	}
 	@include respond (mobile) {

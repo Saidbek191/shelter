@@ -257,7 +257,7 @@ p {
 }
 @media only screen and (max-width: 375px) {
   .card__img {
-    margin: -12px 8px 9px 0;
+    margin: -22px 2px 14px 2px;
   }
 }
 
@@ -391,15 +391,21 @@ p {
     gap: 65px;
   }
 }
+@media only screen and (max-width: 375px) {
+  .footer__wrapper {
+    margin-top: 0.8rem;
+  }
+}
+
 .footer__content-wrapper {
   display: flex;
   gap: 136px;
 }
 @media only screen and (max-width: 768px) {
   .footer__content-wrapper {
-    gap: 35px;
-    padding: 0 0 30px 13px;
-    margin: -25px 0 0 0;
+    gap: 40px;
+    padding: 0 0 12px 30px;
+    margin: -27px 0 0 0;
   }
 }
 @media only screen and (max-width: 375px) {
@@ -415,7 +421,7 @@ p {
 .questions {
   display: flex;
   flex-direction: column;
-  gap: 2.4rem;
+  gap: 2.6rem;
   color: #f1cdb3;
   max-width: 300px;
 }
@@ -439,6 +445,10 @@ p {
   }
 }
 
+.visit__title {
+  max-width: 270px;
+}
+
 .questions__email,
 .questions__phone,
 .visit__boston,
@@ -459,7 +469,11 @@ p {
   line-height: 1.15;
 }
 
-.questions__icon {
+.questions__icon .questions__email {
+  width: 40px;
+  height: 26px;
+}
+.questions__icon .questions__phone {
   width: 40px;
   height: 32px;
 }
@@ -468,6 +482,12 @@ p {
   display: flex;
   flex-direction: column;
   color: #f1cdb3;
+  gap: 34px;
+}
+@media only screen and (max-width: 768px) {
+  .visit {
+    gap: 32px;
+  }
 }
 @media only screen and (max-width: 375px) {
   .visit {
@@ -482,6 +502,7 @@ p {
   font-style: normal;
   letter-spacing: 0.06em;
   line-height: 1.15;
+  max-width: 320px;
   width: 100%;
 }
 @media only screen and (max-width: 375px) {
@@ -498,7 +519,13 @@ p {
 
 .footer__img {
   height: 100%;
-  margin: -31px 0 0 -30px;
+  margin: -14px 0 0 -14px;
+}
+@media only screen and (max-width: 768px) {
+  .footer__img {
+    width: 41%;
+    margin: -12px 0 0 -24px;
+  }
 }
 @media only screen and (max-width: 375px) {
   .footer__img {
@@ -553,7 +580,8 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 57px 0 0 -28px;
+    margin: 60px 0 0 -28px;
+    gap: 40px;
   }
 }
 @media only screen and (max-width: 375px) {
@@ -569,13 +597,14 @@ p {
 @media only screen and (max-width: 768px) {
   .hero__article .title__hero {
     max-width: 410px;
-    margin-right: 48px;
+    margin-right: 44px;
+    padding-bottom: 0;
   }
 }
 @media only screen and (max-width: 375px) {
   .hero__article .title__hero {
     width: 80%;
-    margin: -2px 0 4px 22px;
+    margin: -2px 0 0 30px;
     font-size: 25px;
     letter-spacing: 6%;
   }
@@ -587,12 +616,16 @@ p {
 @media only screen and (max-width: 768px) {
   .hero__article .text__hero {
     max-width: 460px;
+    letter-spacing: 0.01em;
+    font-size: 14px;
+    line-height: 1.7;
   }
 }
 @media only screen and (max-width: 375px) {
   .hero__article .text__hero {
-    width: 100%;
-    letter-spacing: -4%;
+    margin: -2px 0 0 10px;
+    letter-spacing: -5%;
+    font-size: inherit;
   }
 }
 
@@ -612,11 +645,12 @@ p {
 @media only screen and (max-width: 768px) {
   .button__hero {
     margin-left: 0px;
+    margin-top: 0.1rem;
   }
 }
 @media only screen and (max-width: 375px) {
   .button__hero {
-    margin-left: 20px;
+    margin: -2px 0 0 26px;
   }
 }
 
@@ -630,8 +664,8 @@ p {
 }
 @media only screen and (max-width: 768px) {
   .hero__img .img__hero {
-    width: 76%;
-    margin: -25px 0 0 140px;
+    width: 78%;
+    margin: -22px 0 0 138px;
   }
 }
 @media only screen and (max-width: 375px) {
@@ -662,12 +696,18 @@ p {
     gap: 0;
   }
 }
+@media only screen and (max-width: 375px) {
+  .about__wrapper {
+    gap: 24px;
+  }
+}
+
 .about__img img {
   flex: 0 0 24.2%;
 }
 @media only screen and (max-width: 768px) {
   .about__img img {
-    margin: 53px 10px 0 -15px;
+    margin: 80px 14px 0 -10px;
   }
 }
 @media only screen and (max-width: 375px) {
@@ -690,13 +730,14 @@ p {
   .about__article {
     padding: 0;
     max-width: 430px;
+    gap: 1.6rem;
   }
 }
 @media only screen and (max-width: 375px) {
   .about__article {
     max-width: 430px;
     text-align: justify;
-    margin: -17px 0 0 4px;
+    margin: -15px 0 0 4px;
   }
 }
 
@@ -712,16 +753,14 @@ p {
 }
 @media only screen and (max-width: 768px) {
   .title__about {
-    margin: 4px 0 0 -12px;
+    margin: -1px 0 0 -10px;
   }
 }
 @media only screen and (max-width: 375px) {
   .title__about {
-    width: 100%;
     font-size: 25px;
     text-align: center;
-    line-height: 130%;
-    padding: 0 0 0 20px;
+    padding: 0 0 0 15px;
   }
 }
 
@@ -731,7 +770,7 @@ p {
 }
 @media only screen and (max-width: 768px) {
   .text__about {
-    letter-spacing: 1%;
+    letter-spacing: 0%;
     margin: -2px 0 0 -12px;
   }
 }
@@ -769,7 +808,7 @@ p {
 }
 @media only screen and (max-width: 768px) {
   .pets__title {
-    margin: -2px 0 0 0;
+    margin: 3px 0 0 0;
     letter-spacing: 0.04em;
   }
 }
@@ -793,7 +832,7 @@ p {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 3.75rem;
+  margin-top: 4rem;
 }
 .pets__slider svg {
   width: 14px;
@@ -848,7 +887,7 @@ p {
 }
 @media only screen and (max-width: 768px) {
   .pets__btn {
-    margin: 54px auto 0 auto;
+    margin: 58px auto 0 auto;
   }
 }
 @media only screen and (max-width: 375px) {
@@ -955,7 +994,7 @@ p {
 }
 @media only screen and (max-width: 768px) {
   .help__title {
-    margin: -6px -8px 0 -36px;
+    margin: -2px -10px 0 -33px;
     letter-spacing: 0.04em;
   }
 }
@@ -977,8 +1016,8 @@ p {
   .help__items {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2.8rem;
-    margin: 3px 58px 0 29px;
+    gap: 3rem;
+    margin: 3px 54px 0 30px;
   }
   .help__items .help__first-row,
   .help__items .help__second-row {
@@ -1004,7 +1043,7 @@ p {
 .help__item {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1.8rem;
   text-align: center;
   color: #545454;
 }
@@ -1072,13 +1111,12 @@ p {
 }
 
 .donation__img {
-  flex: 0 0 44%;
+  flex: 0 0 47%;
   padding-top: 9px;
-  margin-left: 16px;
 }
 @media only screen and (max-width: 768px) {
   .donation__img {
-    margin: -10px 0 0 -13px;
+    margin: -5px 0 0 -25px;
   }
 }
 @media only screen and (max-width: 375px) {
@@ -1095,12 +1133,13 @@ p {
   flex-direction: column;
   justify-content: center;
   gap: 1.25rem;
-  margin: 2px 38px 0 0;
+  margin: 0 18px 0 -52px;
+  flex: 0 0 34%;
 }
 @media only screen and (max-width: 768px) {
   .donation__content {
-    margin: -3px 0 0 -24px;
-    gap: 18px;
+    margin: 0 0 0 -22px;
+    gap: 20px;
   }
 }
 @media only screen and (max-width: 375px) {

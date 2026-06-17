@@ -22,7 +22,7 @@
 	letter-spacing: 0.04em;
 	line-height: 1.2;
 	@include respond (tablet) {
-		margin: -2px 0 0 0;
+		margin: 3px 0 0 0;
 		letter-spacing: 0.04em;
 	}
 	@include respond (mobile) {
@@ -42,7 +42,7 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: $space-13;
+	margin-top: 4rem;
 	svg {
 		width: 14px;
 		height: 6px;
@@ -91,7 +91,7 @@
 	justify-content: center;
 	margin: $space-13 auto 0 auto;
 	@include respond (tablet) {
-		margin: 54px auto 0 auto;
+		margin: 58px auto 0 auto;
 	}
 	@include respond (mobile) {
 		margin-top: 20px;
