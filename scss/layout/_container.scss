@@ -1,6 +1,11 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
 
 .container {
 	max-width: 1260px;
 	padding: 0 20px;
 	margin: 0 auto;
+	@include respond (mobile) {
+		padding: 0 10px;
+	}
 }

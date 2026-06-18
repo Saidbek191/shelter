@@ -19,11 +19,11 @@
 
 .pets__title {
 	text-align: center;
-	letter-spacing: 0.04em;
-	line-height: 1.2;
+	letter-spacing: 0.06em;
+	line-height: 1.3;
 	@include respond (tablet) {
-		margin: 3px 0 0 0;
-		letter-spacing: 0.04em;
+		// margin: 3px 0 0 0;
+		letter-spacing: 0.06em;
 	}
 	@include respond (mobile) {
 		font-size: 25px;
@@ -32,7 +32,7 @@
 }
 
 .card__title {
-	padding-top: $space-6;
+	// padding-top: $space-6;
 	@include respond (mobile) {
 		padding-top: $space-2;
 	}
@@ -42,10 +42,13 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	margin-top: 4rem;
+	margin-top: 3.6rem;
 	svg {
 		width: 14px;
 		height: 6px;
+	}
+	@include respond (tablet) {
+		margin-top: 3.8rem;
 	}
 	@include respond (mobile) {
 		flex-wrap: wrap;
@@ -81,7 +84,7 @@
 }
 
 .card__button {
-	margin: $space-6 0;
+	margin: 0 0 $space-6 0;
 	align-self: center;
 }
 
@@ -135,7 +138,7 @@
 }
 
 .pets__title-page {
-	margin: -8px 7px 0 4px;
+	margin: 2px 0 0 4px;
 	letter-spacing: 5%;
 }
 
@@ -145,7 +148,9 @@
 	align-items: center;
 	flex-wrap: wrap;
 	margin: 3.7rem 0;
-	gap: $space-5 $space-8;
+	// gap: $space-5 $space-8;
+	column-gap: 40px;
+	row-gap: 28px;
 }
 
 .pets__pagination {

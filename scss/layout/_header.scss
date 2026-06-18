@@ -3,11 +3,14 @@
 @use '../base/typography';
 
 .header__wrapper {
-	padding-top: $space-6;
+	padding-top: 2.2rem;
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
 	height: $space-18;
+	@include respond(tablet) {
+		padding-top: 1.7rem;
+	}
 	.burger-menu {
 		max-height: $space-5;
 		display: none;
@@ -48,9 +51,13 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	gap: $space-1;
+	gap: 0.4rem;
 	cursor: default;
+	@include respond(tablet) {
+		gap: 0.5rem;
+	}
 	.logo {
+		font-family: $font-main;
 		font-size: $fs-xl;
 		line-height: $lh-pets-character;
 		letter-spacing: 0.06em;
@@ -72,7 +79,11 @@
 	.header__list {
 		display: flex;
 		gap: 2rem;
-		margin: 0 20px 6px 0;
+		margin: -2px 22px 6px 0;
+		letter-spacing: 0.3px;
+		@include respond(tablet) {
+			margin: 2px 22px 6px 0;
+		}
 		@include respond(mobile) {
 			display: none;
 		}

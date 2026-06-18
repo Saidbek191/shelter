@@ -10,7 +10,7 @@
 .card {
 	display: flex;
 	flex-direction: column;
-	
+	gap: 30px;
 	background-color: $color-light-s;
 	border-radius: $space-1;
 	transition: background-color 0.3s ease-in-out box-shadow 0.8s ease;

@@ -2,7 +2,7 @@
 @use '../abstracts/mixins' as *;
 
 body {
-	font-family: $font-main;
+	font-family: $font-secondary;
 	font-size: $fs-sm;
 	line-height: $lh-base;
 	color: $color-dark-3xl;
@@ -26,7 +26,7 @@ body {
 
 @font-face {
 	font-family: "Arial";
-	src: url("../../assets/fonts/Arial-Italic.woff2") format("woff2");
+	src: url("../../assets/fonts/Arial-ItalicMT.woff2") format("woff2");
 	font-weight: 400;
 	font-style: italic;
 	font-display: swap;
@@ -41,6 +41,7 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
 	font-weight: 400;
+	font-family: $font-main;
 }
 	
 h1 {
