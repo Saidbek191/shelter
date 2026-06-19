@@ -28,7 +28,7 @@
 }
 
 .pets__arrow--prev, .pets__arrow--next {
-	display: inline-block;
+	// display: inline-block;
 	width: 52px;
 	height: 52px;
 	text-align: center;
@@ -37,6 +37,7 @@
 	background-color: transparent;
 	cursor: pointer;
 	transition: background-color 0.2s ease-in-out;
+	padding: 10px 0 0 0;
 	&:hover {
 		background-color: $color-primary-light;
 		border-color: transparent;
@@ -58,7 +59,7 @@
 	}
 	@include respond (mobile) {
 		order: 2;
-		margin: 20px 68px 20px -10px;
+		margin: 22px 72px 20px 0;
 	}
 }
 
@@ -70,6 +71,6 @@
 	}
 	@include respond (mobile) {
 		order: 3;
-		margin-top: 20px 0;
+		// margin-top: 20px 0;
 	}
 }

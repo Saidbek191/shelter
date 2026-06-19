@@ -29,8 +29,8 @@
 	@include respond (mobile) {
 		display: block;
 		height: auto;
-		width: 90%;
-		margin: 20px auto 0 auto;
+		width: 86%;
+		margin: 14px auto 0 auto;
 	}
 }
 
@@ -48,10 +48,10 @@
 		// margin: -16px 0 0 -10px;
 	}
 	@include respond (mobile) {
-		max-width: 430px;
-		// height: 100%	;
+		// max-width: 430px;
+		width: 90%	;
 		text-align: justify;
-		margin: -15px 0 0 4px
+		margin: -9px 0 0 0
 	}
 }
 .title {
@@ -73,7 +73,7 @@
 		font-size: 25px;
 		text-align: center;
 		// line-height: 130%;
-		padding: 0 0 0 15px;
+		margin: 0;
 		// margin: -24px 0 0 -12px;
 	}
 }

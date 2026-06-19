@@ -17,8 +17,8 @@
 		position: relative;
 		.burger__line {
 			position: absolute;
-			top: -3px;
-			left: 16px;
+			top: -2px;
+			left: 12px;
 			width: 30px;
 			height: 2px;
 			background-color: $color-primary;
@@ -46,6 +46,7 @@
 }
 
 
+
 .header__logo {
 	z-index: 2;
 	display: flex;
@@ -55,6 +56,9 @@
 	cursor: default;
 	@include respond(tablet) {
 		gap: 0.5rem;
+	}
+	@include respond(mobile) {
+		margin: 4px 0 0 10px;
 	}
 	.logo {
 		font-family: $font-main;
@@ -72,6 +76,7 @@
 	}
 }
 
+
 .header__nav {
 	z-index: 2;
 	font-family: $font-secondary;
@@ -88,7 +93,7 @@
 			display: none;
 		}
 	}
-
+	
 	
 	.header__item {
 		color: $color-dark-s;
@@ -106,4 +111,59 @@
 			}
 		}
 	}
+}
+
+
+// OUR PETS PAGE
+
+.bg--white {
+	background-color: $color-light-xl;
+	padding: 0 0 $space-6 0;
+	.logo__subtitle--dark {
+		color: $color-dark-3xl;
+		// font-family: $font-secondary;
+	}
+	.header__nav--dark {
+		.header__list--dark {
+			display: flex;
+			gap: 1.8rem;
+			// font-family: $font-secondary;
+			margin-right: 20px;
+			@include respond(tablet) {
+				gap: 1.8rem;
+				margin: 0 10px 0 0;
+			}
+			.header__item--dark {
+				color: $color-dark-l;
+				
+			}
+			.header__link--dark {
+				@include respond(tablet) {
+					font-size: 15px;
+					letter-spacing: 0%;
+				}
+				// letter-spacing: 0.03em;
+				// line-height: $lh-pets-title;
+			}
+			.header__link--dark-active {
+				border-bottom: 3px solid $color-primary;
+			}
+		}
+	}
+}
+
+.wrapper--white {
+	padding-top: 1.8rem;
+	.header__logo--dark {
+		gap: 0.5rem;
+		@include respond(tablet) {
+			margin: 4px 0 0 10px;
+		}
+		.logo--dark {
+			color: $color-dark-l;
+			font-size: $fs-xl;
+			letter-spacing: 0.06em;
+		}
+	}
+
 }

@@ -2,10 +2,18 @@
 @use '../abstracts/variables' as *;
 
 
-.cards__wrapper {
+.pets-page__cards {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: $space-18;
+	grid-template-columns: repeat(4, 270px);
+	gap: 30px 40px;
+	justify-content: center;
+	margin: 56px 0 46px -20px;
+	@include respond (tablet) {
+		grid-template-columns: repeat(2, 270px);
+	}
+	@include respond (mobile) {
+		grid-template-columns: repeat(1, 270px);
+	}
 }
 .card {
 	display: flex;
@@ -13,7 +21,8 @@
 	gap: 30px;
 	background-color: $color-light-s;
 	border-radius: $space-1;
-	transition: background-color 0.3s ease-in-out box-shadow 0.8s ease;
+	margin: 0 auto;
+	transition: background-color 0.3s ease-in-out, box-shadow 0.8s ease;
 	cursor: pointer;
 	&:hover .button--secondary {
 		background-color: $color-primary;
@@ -21,13 +30,16 @@
 	&:hover {
 		box-shadow: 0 4px 5px 1px rgba(24, 24, 25, 0.2);
 	}
+	
+	@include respond (mobile) {
+	}
 }
 
 .card__img {
 	width: 100%;
 	border-radius: 10px;
 	@include respond (mobile) {
-		margin: -22px 2px 14px 2px;
+		margin: -8px 0 0 0;
 	}
 }
 
@@ -38,3 +50,4 @@
 	color: $color-dark-l;
 	letter-spacing: 0.06em;
 }
+

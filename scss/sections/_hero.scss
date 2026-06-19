@@ -64,7 +64,7 @@
 		}
 		@include respond (mobile) {
 			width: 80%;
-			margin: -2px 0 0 30px;
+			margin: -2px 0 0 41px;
 			font-size: 25px;
 			// line-height: $lh-title;
 			letter-spacing: 6%;
@@ -81,9 +81,9 @@
 			width: 100%;
 		}
 		@include respond (mobile) {
-			margin: -2px 0 0 10px;
-			// width: 100%;
-			letter-spacing: -5%;
+			margin: 0 0 0 10px;
+			line-height: 1.7;
+			letter-spacing: 1%;
 			font-size: inherit;
 		}
 	}
@@ -108,7 +108,7 @@
 		margin: 0 auto;
 	}
 	@include respond (mobile) {
-		margin: -2px 0 0 26px;
+		margin: 2px 0 0 56px;
 	}
 }
 
@@ -124,8 +124,8 @@
 			
 		}
 		@include respond (mobile) {
-			width: 95%;
-			margin: 12px 0 0 26px;
+			width: 86%;
+			margin: 16px 0 0 40px;
 		}
 	}
 }

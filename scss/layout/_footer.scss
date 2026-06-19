@@ -72,8 +72,8 @@
 		max-width: 270px;
 		// letter-spacing: 0.06em;
 		@include respond (mobile) {
-			letter-spacing: 0.05em;
-			margin-left: 7px;
+			letter-spacing: 0.06em;
+			margin-left: 17px;
 		}
 }
 .questions__email, 
@@ -82,7 +82,7 @@
 .visit__london {
 	display: flex;
 	align-items: center;
-	gap: $space-3;
+	gap: 1.2rem;
 }
 
 .questions__email {
@@ -148,20 +148,20 @@
 	max-width: 320px;
 	width: 100%;
 	@include respond (mobile) {
-		letter-spacing: 0.03em;
+		letter-spacing: 0.04em;
 	}
 }
 .visit__boston {
 	// padding-top: 1.7rem;
 	@include respond (tablet) {
-		gap: 1.3rem;
+		gap: 1.4rem;
 	}
 }
 .visit__london {
 	// padding-top: 2rem;
 }
 .visit__icon {
-	width: 22px;
+	width: 26px;
 	height: 32px;
 }
 
@@ -173,7 +173,41 @@
 			margin: -12px 0 0 -24px;
 		}
 		@include respond (mobile) {
-			width: 92%;
+			width: 87%;
 			margin: -28px 0 0 0;
 		}
 	}
+
+
+// OUR PETS PAGE
+
+.footer--second-page {
+	padding: 4rem 0 0 0;
+}
+
+.footer__wrapper-page {
+	margin: -7px -3px 0 0;
+	justify-content: space-between;
+	gap: 96px;
+
+	.footer__content-wrapper-page {
+		gap: 165px;
+	}
+}
+
+.questions__email--second {
+	gap: 20px;
+}
+
+.questions__phone--second {
+
+}
+
+.footer__address--sec-page {
+	letter-spacing: 0.03em;
+}
+
+.footer__img--second-puppy {
+	width: 25%;
+	margin: -18px 22px 0 0; 
+}
