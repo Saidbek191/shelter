@@ -2,18 +2,29 @@
 @use '../abstracts/variables' as *;
 
 
-.cards__wrapper {
+.pets-page__cards {
 	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: $space-18;
+	grid-template-columns: repeat(4, 270px);
+	gap: 30px 40px;
+	justify-content: center;
+	margin: 56px 0 46px -20px;
+	@include respond (tablet) {
+		grid-template-columns: repeat(2, 270px);
+		margin: 30px 40px;
+	}
+	@include respond (mobile) {
+		grid-template-columns: repeat(1, 270px);
+		margin: 42px 0 40px 15px;
+	}
 }
 .card {
 	display: flex;
 	flex-direction: column;
-	
+	gap: 30px;
 	background-color: $color-light-s;
 	border-radius: $space-1;
-	transition: background-color 0.3s ease-in-out box-shadow 0.8s ease;
+	margin: 0 auto;
+	transition: background-color 0.3s ease-in-out, box-shadow 0.8s ease;
 	cursor: pointer;
 	&:hover .button--secondary {
 		background-color: $color-primary;
@@ -35,3 +46,4 @@
 	color: $color-dark-l;
 	letter-spacing: 0.06em;
 }
+
