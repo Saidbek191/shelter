@@ -28,7 +28,7 @@
 }
 
 .pets__arrow--prev, .pets__arrow--next {
-	// display: inline-block;
+	display: inline-block;
 	width: 52px;
 	height: 52px;
 	text-align: center;
@@ -37,40 +37,42 @@
 	background-color: transparent;
 	cursor: pointer;
 	transition: background-color 0.2s ease-in-out;
-	padding: 10px 0 0 0;
-	&:hover {
-		background-color: $color-primary-light;
-		border-color: transparent;
-	}
+&:hover {
+	background-color: $color-primary-light;
+	border-color: transparent;
 }
-.pets__arrow--next {
-	transform: rotate(180deg);
-	&:hover {
-		background-color: $color-primary-light;
-		border-color: transparent;
-	}	
 }
-
 .pets__arrow--prev {
-	margin-right: $space-11;
-	padding-bottom: 5px;
+transform: rotate(180deg);
+&:hover {
+	background-color: $color-primary-light;
+	border-color: transparent;
+}	
+}
+.pets__slider {
+	
+	
+	.pets__arrow--prev {
+		margin-right: $space-11;
+		padding-top: 0;
+		transform: rotate(360deg);
 	@include respond (tablet) {
 		margin-right: $space-2;
 	}
 	@include respond (mobile) {
 		order: 2;
-		margin: 22px 72px 20px 0;
+		margin: 20px 72px 27px 0;
 	}
 }
-
 .pets__arrow--next {
 	margin-left: $space-11;
-	padding-top: 0;
+	padding-bottom: 5px;
+	transform: rotate(180deg);
 	@include respond (tablet) {
 		margin-left: $space-2;
 	}
 	@include respond (mobile) {
-		order: 3;
-		// margin-top: 20px 0;
+		order: 2;
 	}
+}
 }

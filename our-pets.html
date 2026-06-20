@@ -17,6 +17,9 @@
               Shelter for pets in Boston
             </p>
           </div>
+          <div class="burger-menu">
+            <span class="burger__line burger__line--dark"></span>
+          </div>
           <nav class="header__nav header__nav--dark">
             <ul class="header__list header__list--dark">
               <li class="header__item header__item--dark">
@@ -145,14 +148,26 @@
               </article>
             </div>
           </div>
-          <div class="pets__pagination">
-            <button class="pagination__double-arrow pets__arrow--next">
+          <div class="pets__pagination pets__pagination-page">
+            <button
+              class="pagination__double-arrow pets__arrow--prev pagination__double-arrow-page-prev"
+            >
               >>
             </button>
-            <button class="pagination__arrow pets__arrow--next">></button>
+            <button
+              class="pagination__arrow pagination__arrow-page-prev pets__arrow--prev"
+            >
+              >
+            </button>
             <span class="pets__pagination-current">1</span>
-            <button class="pagination__arrow pets__arrow--prev">></button>
-            <button class="pagination__double-arrow pets__arrow--prev">
+            <button
+              class="pagination__arrow pagination__arrow-page-next pets__arrow--next"
+            >
+              >
+            </button>
+            <button
+              class="pagination__double-arrow pets__arrow--next pagination__double-arrow-page-next"
+            >
               >>
             </button>
           </div>

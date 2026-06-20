@@ -28,13 +28,10 @@
 	}
 	@include respond (mobile) {
 		flex-direction: column;
-		// margin-top: 3rem;
 		text-align: center;
 		gap: 0;
 	}
 }
-
-
 
 .hero__article {
 	z-index: 2;
@@ -59,22 +56,18 @@
 		@include respond (tablet) {
 			max-width: 310px;
 			width: 100%;
-			// margin-right: 44px;
 			padding-bottom: 0;
 		}
 		@include respond (mobile) {
 			width: 80%;
 			margin: -2px 0 0 41px;
 			font-size: 25px;
-			// line-height: $lh-title;
 			letter-spacing: 6%;
 		}
 	}
 	.text__hero {
 		color: $color-dark-s;
-		// letter-spacing: -2%;
 		@include respond (tablet) {
-			// max-width: 460px;
 			letter-spacing: 0.01em;
 			font-size: 14px;
 			line-height: 1.8;
@@ -102,8 +95,6 @@
 	text-align: center;
 	padding-top: $space-3;
 	@include respond (tablet) {
-		// margin-left: 0px;
-		// margin-top: 0.1rem;
 		display: flow;
 		margin: 0 auto;
 	}

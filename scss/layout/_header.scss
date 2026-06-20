@@ -11,37 +11,44 @@
 	@include respond(tablet) {
 		padding-top: 1.7rem;
 	}
-	.burger-menu {
-		max-height: $space-5;
-		display: none;
-		position: relative;
-		.burger__line {
-			position: absolute;
-			top: -2px;
-			left: 12px;
+}
+.burger-menu {
+	max-height: $space-5;
+	display: none;
+	position: relative;
+	.burger__line {
+		position: absolute;
+		top: -2px;
+		left: 12px;
+		width: 30px;
+		height: 2px;
+		background-color: $color-primary;
+		transition: all 0.3s ease-in-out;
+		&::before, &::after {
+			content: "";
 			width: 30px;
 			height: 2px;
 			background-color: $color-primary;
+			position: absolute;
+			left: 0;
 			transition: all 0.3s ease-in-out;
+		}
+		&::before {
+			top: -9px;
+		}
+		&::after {
+			top: 9px;
+		}
+		&--dark {
+			background-color: $color-dark-l;
+
 			&::before, &::after {
-				content: "";
-				width: 30px;
-				height: 2px;
-				background-color: $color-primary;
-				position: absolute;
-				left: 0;
-				transition: all 0.3s ease-in-out;
-			}
-			&::before {
-				top: -9px;
-			}
-			&::after {
-				top: 9px;
+				background-color: $color-dark-l;
 			}
 		}
-		@include respond(mobile) {
-			display: block;
-		}
+	}
+	@include respond(mobile) {
+		display: block;
 	}
 }
 
@@ -108,6 +115,7 @@
 			border-bottom: 2px solid $color-primary;
 			&:hover {
 				border-bottom: 2px solid transparent;
+				color: $color-light-s;
 			}
 		}
 	}
@@ -121,18 +129,22 @@
 	padding: 0 0 $space-6 0;
 	.logo__subtitle--dark {
 		color: $color-dark-3xl;
-		// font-family: $font-secondary;
 	}
-	.header__nav--dark {
+}
+
+.header__nav--dark {
+		font-weight: 600;
 		.header__list--dark {
 			display: flex;
 			gap: 1.8rem;
-			// font-family: $font-secondary;
-			margin-right: 20px;
-			@include respond(tablet) {
-				gap: 1.8rem;
-				margin: 0 10px 0 0;
-			}
+		margin-right: 20px;
+		@include respond(tablet) {
+			gap: 1.9rem;
+			margin: 5px 10px 5px 0;
+		}
+		@include respond(mobile) {
+			display: none;
+		}
 			.header__item--dark {
 				color: $color-dark-l;
 				
@@ -142,16 +154,14 @@
 					font-size: 15px;
 					letter-spacing: 0%;
 				}
-				// letter-spacing: 0.03em;
-				// line-height: $lh-pets-title;
 			}
 			.header__link--dark-active {
 				border-bottom: 3px solid $color-primary;
+				color: $color-dark-3xl;
 			}
 		}
 	}
-}
-
+		
 .wrapper--white {
 	padding-top: 1.8rem;
 	.header__logo--dark {
@@ -165,5 +175,4 @@
 			letter-spacing: 0.06em;
 		}
 	}
-
 }
