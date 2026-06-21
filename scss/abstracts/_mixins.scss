@@ -1,20 +1,13 @@
 @use '../abstracts/variables' as *;
 
 @mixin respond($breakpoint) {
-	@if $breakpoint == mobile {
-		@media only screen and (max-width: 375px) {
-			@content;
-		}
-	}
-	
 	@if $breakpoint == tablet {
-		@media only screen and (max-width: 768px) {
+		@media (max-width: 1279px) {
 			@content;
 		}
 	}
-
-	@if $breakpoint == desktop {
-		@media only screen and (max-width: 1280px) {
+	@if $breakpoint == mobile {
+		@media (max-width: 767px) {
 			@content;
 		}
 	}

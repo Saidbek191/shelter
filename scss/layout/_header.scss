@@ -61,6 +61,7 @@
 	align-items: center;
 	gap: 0.4rem;
 	cursor: default;
+	margin: -2px 0 0 -12px;
 	@include respond(tablet) {
 		gap: 0.5rem;
 	}
@@ -91,10 +92,10 @@
 	.header__list {
 		display: flex;
 		gap: 2rem;
-		margin: -2px 22px 6px 0;
+		margin: 0 11px 7px 0;
 		letter-spacing: 0.3px;
 		@include respond(tablet) {
-			margin: 2px 22px 6px 0;
+			margin: 0px 12px 6px 0;
 		}
 		@include respond(mobile) {
 			display: none;
@@ -137,7 +138,7 @@
 		.header__list--dark {
 			display: flex;
 			gap: 1.8rem;
-		margin-right: 20px;
+			margin: 0 12px 0 0;
 		@include respond(tablet) {
 			gap: 1.9rem;
 			margin: 5px 10px 5px 0;
@@ -147,7 +148,7 @@
 		}
 			.header__item--dark {
 				color: $color-dark-l;
-				
+				font-size: 14px;
 			}
 			.header__link--dark {
 				@include respond(tablet) {

@@ -36,7 +36,7 @@
 .hero__article {
 	z-index: 2;
 	flex: 0 0 38.33%;
-	margin-top: 10px;
+	margin: 10px 0 0 -8px;
 	@include respond (tablet) {
 		width: 100%;
 		max-width: 460px;
@@ -50,7 +50,7 @@
 		width: 100%;
 	}
 	.title__hero {
-		width: 67.40%;
+		width: 70.4%;
 		color: $color-light-xl;
 		padding-bottom: 44px;
 		@include respond (tablet) {
@@ -106,12 +106,12 @@
 .hero__img {
 	z-index: 2;
 	margin-top: 90px;
-	width: 100%;
+	// width: 100%;
+	flex: 0 0 58.17%;
 	.img__hero {
-		flex: 0 0 58.17%;
 		@include respond (tablet) {
-			width: 78%;
-			margin: -22px 0 0 138px;
+			width: 80%;
+			margin: -22px 0 0 130px;
 			
 		}
 		@include respond (mobile) {
