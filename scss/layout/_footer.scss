@@ -10,7 +10,7 @@
 .footer__wrapper {
 	display: flex;
 	gap: 116px;
-	margin-top: 1rem;
+	margin: 1rem 0 0 -10px;
 	@include respond (tablet) {
 		flex-direction: column;
 		align-items: center;
@@ -27,14 +27,14 @@
 	@include respond (tablet) {
 		gap: 60px;
 		padding: 0 0 12px 0;
-		margin: -29px 0 0 10px;
+		margin: -26px 0 0 20px;
 	}
 	@include respond (mobile) {
 		flex-direction: column;
 		align-items: center;
 		gap: 40px;
 		padding: 0;
-		margin: -35px 0 0 -2px;
+		margin: -35px 0 0 8px;
 	}
 }
 
@@ -172,11 +172,11 @@
 		margin: -15px 0 0 8px;
 		@include respond (tablet) {
 			width: 41%;
-			margin: -12px 0 0 -24px;
+			margin: -12px 0 0 -13px;
 		}
 		@include respond (mobile) {
-			width: 86%;
-			margin: -24px 0 0 0;
+			width: 83%;
+			margin: -24px 0 0 10px;
 		}
 	}
 
@@ -187,12 +187,12 @@
 	padding: 4rem 0 0 0;
 	
 	.footer__wrapper-page {
-		margin: -7px -3px 0 0;
+		margin: -5px 37px 0 0;
 		justify-content: space-between;
 		gap: 96px;
 		
 		.footer__content-wrapper-page {
-			gap: 165px;
+			gap: 150px;
 			@include respond (tablet) {
 				gap: 60px;
 				margin-left: 30px;
@@ -238,7 +238,7 @@
 	
 	.footer__img--second-puppy {
 		width: 25%;
-		margin: -22px 22px 0 0; 
+		margin: -20px -24px 0 0; 
 		@include respond (tablet) {
 			width: 41%;
 			margin: -46px 4px 0 0;

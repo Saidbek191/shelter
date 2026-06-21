@@ -2,9 +2,13 @@
 @use '../abstracts/variables' as *;
 
 .container {
-	max-width: 1260px;
-	padding: 0 20px;
+	width: 100%;
+	max-width: 1200px;
 	margin: 0 auto;
+	// padding: 0 40px;
+	@include respond (tablet) {
+		padding: 0 30px;
+	}
 	@include respond (mobile) {
 		padding: 0 10px;
 	}

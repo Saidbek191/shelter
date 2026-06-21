@@ -7,10 +7,10 @@
 	grid-template-columns: repeat(4, 270px);
 	gap: 30px 40px;
 	justify-content: center;
-	margin: 56px 0 46px -20px;
+	margin: 54px 0 46px -10px;
 	@include respond (tablet) {
 		grid-template-columns: repeat(2, 270px);
-		margin: 30px 40px;
+		margin: 30px 60px;
 	}
 	@include respond (mobile) {
 		grid-template-columns: repeat(1, 270px);
@@ -20,7 +20,7 @@
 .card {
 	display: flex;
 	flex-direction: column;
-	gap: 30px;
+	gap: 27px;
 	background-color: $color-light-s;
 	border-radius: $space-1;
 	margin: 0 auto;
