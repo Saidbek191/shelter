@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./assets/icons/favicon.png" type="image/png" />
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/code.js" defer></script>
+    <script type="module" src="./js/main.js" defer></script>
     <title>Shelter</title>
   </head>
   <body>
@@ -438,6 +438,26 @@
         </div>
       </section>
     </main>
+    <div class="popup">
+      <div class="popup__overlay">
+        <div class="popup__body">
+          <button class="popup__close"></button>
+          <img src="" alt="" class="popup__img" />
+          <div class="popup__info">
+            <h2 class="popup__title"></h2>
+            <h3 class="popup__subtitle"></h3>
+            <p class="popup__text"></p>
+
+            <ul class="popup__list">
+              <li class="popup__item">Age:</li>
+              <li class="popup__item">Inoculations:</li>
+              <li class="popup__item">Diseases:</li>
+              <li class="popup__item">Parasites:</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer class="footer bg--gradient" id="contacts">
       <div class="container">
         <div class="footer__wrapper">

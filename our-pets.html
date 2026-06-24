@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./assets/icons/favicon.png" type="image/png" />
     <link rel="stylesheet" href="./css/style.css" />
-    <script src="./js/code.js" defer></script>
+    <script type="module" src="./js/main.js" defer></script>
     <title>Shelter</title>
   </head>
   <body>
@@ -41,6 +41,7 @@
               </ul>
             </nav>
           </div>
+          <div class="overlay"></div>
           <nav class="header__nav header__nav--dark">
             <ul class="header__list header__list--dark">
               <li class="header__item header__item--dark">
@@ -86,7 +87,7 @@
                   alt="Katrine the cat"
                 />
                 <p class="card__title">Katrine</p>
-                <button class="card__button button--secondary">
+                <button data-id="1" class="card__button button--secondary">
                   Learn more
                 </button>
               </div>
@@ -97,7 +98,7 @@
                   alt="Jennifer the dog"
                 />
                 <p class="card__title">Jennifer</p>
-                <button class="card__button button--secondary">
+                <button data-id="2" class="card__button button--secondary">
                   Learn more
                 </button>
               </div>
@@ -108,7 +109,7 @@
                   alt="Woody the dog"
                 />
                 <p class="card__title">Woody</p>
-                <button class="card__button button--secondary">
+                <button data-id="3" class="card__button button--secondary">
                   Learn more
                 </button>
               </div>
@@ -119,7 +120,7 @@
                   alt="Sophia the dog"
                 />
                 <p class="card__title">Sophia</p>
-                <button class="card__button button--secondary">
+                <button data-id="4" class="card__button button--secondary">
                   Learn more
                 </button>
               </div>
@@ -130,7 +131,7 @@
                   alt="Timmy the cat"
                 />
                 <p class="card__title">Timmy</p>
-                <button class="card__button button--secondary">
+                <button data-id="5" class="card__button button--secondary">
                   Learn more
                 </button>
               </div>
@@ -141,7 +142,7 @@
                   alt="Charly the dog"
                 />
                 <p class="card__title">Charly</p>
-                <button class="card__button button--secondary">
+                <button data-id="6" class="card__button button--secondary">
                   Learn more
                 </button>
               </div>
@@ -152,7 +153,7 @@
                   alt="Scarlett the dog"
                 />
                 <p class="card__title">Scarlett</p>
-                <button class="card__button button--secondary">
+                <button data-id="7" class="card__button button--secondary">
                   Learn more
                 </button>
               </div>
@@ -163,7 +164,7 @@
                   alt="Freddie the dog"
                 />
                 <p class="card__title">Freddie</p>
-                <button class="card__button button--secondary">
+                <button data-id="8" class="card__button button--secondary">
                   Learn more
                 </button>
               </div>
@@ -195,6 +196,26 @@
         </div>
       </section>
     </main>
+    <div class="popup">
+      <div class="popup__overlay">
+        <div class="popup__body">
+          <button class="popup__close"></button>
+          <img src="" alt="" class="popup__img" />
+          <div class="popup__info">
+            <h2 class="popup__title"></h2>
+            <h3 class="popup__subtitle"></h3>
+            <p class="popup__text"></p>
+
+            <ul class="popup__list">
+              <li class="popup__item">Age:</li>
+              <li class="popup__item">Inoculations:</li>
+              <li class="popup__item">Diseases:</li>
+              <li class="popup__item">Parasites:</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer class="footer footer--second-page bg--gradient" id="contacts">
       <div class="container">
         <div class="footer__wrapper footer__wrapper-page">
