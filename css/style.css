@@ -1263,8 +1263,16 @@ p {
 
 .pets__cards {
   display: flex;
-  flex-wrap: wrap;
+  overflow: hidden;
   gap: 5.6rem;
+  transition: transform 0.4s ease;
+  will-change: transform;
+}
+.pets__cards--left {
+  transform: translateX(-50px);
+}
+.pets__cards--right {
+  transform: translateX(50px);
 }
 @media (max-width: 1279px) {
   .pets__cards {

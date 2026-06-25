@@ -75,7 +75,7 @@ export const pets = [
 	{
 		id: 7,
 		name: "Scarlett",
-		img: "./assets/images/pets-scarlett.jpg",
+		img: "./assets/images/pets-scarlet.jpg",
 		type: "Dog - Jack Russell Terrier",
 		text: "Scarlett is a happy, playful girl who will make you laugh and smile. She forms a bond quickly and will make a loyal companion and a wonderful family dog or a good companion for a single individual too since she likes to hang out and be with her human.",
 		age: "3 months",

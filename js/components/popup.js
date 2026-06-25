@@ -13,32 +13,47 @@ export function initPopup () {
 	const popupInoc = document.querySelector('.popup__inoculations');
 	const popupDiseases = document.querySelector('.popup__diseases');
 	const popupParasites = document.querySelector('.popup__parasites');
+	const cardsContainer = document.querySelector('.pets__cards');
 
 	if (!popup || !popupClose || !popupImg || !popupTitle || !popupText) {
 		return;
 	}
 
-	learnMoreButtons.forEach(button => {	
+	// learnMoreButtons.forEach(button => {	
 		
-		button.addEventListener('click', () => {
+	// 	button.addEventListener('click', () => {
+			
+	// 		const id = Number(button.dataset.id);
+	// 		const pet = pets.find(p => p.id === id);
+
+	// 		if(!pet) return;
+
+	// 	});
+	// });
+	
+	if (cardsContainer) {
+		cardsContainer.addEventListener('click', (e) => {
+			const button = e.target.closest('.card__button');
+			
+			if (!button) return;
 			
 			const id = Number(button.dataset.id);
 			const pet = pets.find(p => p.id === id);
-
-			if(!pet) return;
-
-			popupImg.src = pet.img;
-			popupTitle.textContent = pet.name;
-			popupSubtitle.textContent = pet.type;
-			popupText.textContent = pet.text;
-			popupAge.innerHTML = `<strong class = "dark-font">Age:</strong> <span class = "slim-font">${pet.age}</span>`;
-			popupInoc.innerHTML = `<strong class = "dark-font">Inoculations:</strong> <span class = "slim-font">${pet.inoculations.join(', ')}</span>`;
-			popupDiseases.innerHTML = `<strong class = "dark-font">Diseases:</strong> <span class = "slim-font">${pet.diseases.join(', ')}</span>`;
-			popupParasites.innerHTML = `<strong class = "dark-font">Parasites:</strong> <span class = "slim-font">${pet.parasites.join(',')}</span>`;
 			
-			popup.classList.add('popup--active');
+			if (!pet) return;
+			
+					popupImg.src = pet.img;
+					popupTitle.textContent = pet.name;
+					popupSubtitle.textContent = pet.type;
+					popupText.textContent = pet.text;
+					popupAge.innerHTML = `<strong class = "dark-font">Age:</strong> <span class = "slim-font">${pet.age}</span>`;
+					popupInoc.innerHTML = `<strong class = "dark-font">Inoculations:</strong> <span class = "slim-font">${pet.inoculations.join(', ')}</span>`;
+					popupDiseases.innerHTML = `<strong class = "dark-font">Diseases:</strong> <span class = "slim-font">${pet.diseases.join(', ')}</span>`;
+					popupParasites.innerHTML = `<strong class = "dark-font">Parasites:</strong> <span class = "slim-font">${pet.parasites.join(',')}</span>`;
+					
+					popup.classList.add('popup--active');
 		});
-	});
+	}
 
 	popupClose.addEventListener('click', () => {
 		popup.classList.remove('popup--active');

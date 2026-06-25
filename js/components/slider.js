@@ -1,29 +1,71 @@
+import { pets } from '../data/pets.js';
 export function initSlider () {
-	const slider = document.querySelector('.slider');
-	const sliderItems = document.querySelectorAll('.slider__item');
-	const sliderPrev = document.querySelector('.slider__prev');
-	const sliderNext = document.querySelector('slider__next');
+	const cardsContainer = document.querySelector('.pets__cards');
+	const prevBtn = document.querySelector('.pets__arrow--prev');
+	const nextBtn = document.querySelector('.pets__arrow--next');
 
-	if (!slider || !sliderItems || !sliderPrev || !sliderNext) return;
+	if (!cardsContainer || !prevBtn || !nextBtn) return;
 
-	let currentSlider = 1;
-	const sliderLength = sliderItems.length;
+	let startIndex = 0;
+	let isAnimating = false;
+	let direction = null;
 
-	sliderNext.addEventListener('click', () => {
-		sliderItems[currentSlider - 1].classList.remove('slider__item--active');
-		currentSlider++;
-		if (currentSlider > sliderLength) {
-			currentSlider = 1;	
+	function getCardsPerView () {
+		if (window.innerWidth <= 768) return 1;
+		if (window.innerWidth <= 1279) return 2;
+		return 3;
+	}
+
+	
+	function renderCards () {
+		const visible = getCardsPerView();
+		
+		cardsContainer.innerHTML = '';
+		for (let i = 0; i < visible; i++) {
+			const pet = pets[(startIndex + i) % pets.length];
+
+			cardsContainer.insertAdjacentHTML('beforeend', 
+				`<article class="pets__card card">
+				<img class="card__img" src="${pet.img}" alt="${pet.name} the ${pet.type}" />
+				<h3 class="card__title">${pet.name}</h3>
+				<button data-id="${pet.id}" class="card__button button--secondary">Learn more</button>
+				</article>
+				`);
 		}
-		sliderItems[currentSlider - 1].classList.add('slider__item--active');
-	});
+			}
+			
+			function move(dir) {
+				if (isAnimating) return;
+				isAnimating = true;
+				direction = dir;
 
-	sliderPrev.addEventListener('click', () => {
-		sliderItems[currentSlider - 1].classList.remove('slider__item--active');
-		currentSlider--;
-		if (currentSlider < 1) {
-			currentSlider = sliderLength;
-		}
-		sliderItems[currentSlider - 1].classList.add('slider__item--active');
-	});
+				cardsContainer.classList.add(dir === 'next'
+					 ? 'pets__cards--left' 
+					 : 'pets__cards--right'
+					);
+			}
+			nextBtn.addEventListener('click', () => move('next'));
+			prevBtn.addEventListener('click', () => move('prev'));
+
+			cardsContainer.addEventListener('transitionend', (e) => {
+				if (!isAnimating) return;
+
+				if (e.propertyName !== 'transform') return;
+
+					if (direction === 'next') {
+		startIndex = (startIndex + 1) % pets.length;
+	}
+	if (direction === 'prev') {
+		startIndex = (startIndex - 1 + pets.length) % pets.length;
+	}
+	renderCards();
+
+	requestAnimationFrame(() => {
+					cardsContainer.classList.remove('pets__cards--left');
+					cardsContainer.classList.remove('pets__cards--right');
+
+					isAnimating = false;
+					direction = null;
+				});
+			});
 }
