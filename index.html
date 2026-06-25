@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./assets/icons/favicon.png" type="image/png" />
     <link rel="stylesheet" href="./css/style.css" />
-    <script type="module" src="./js/main.js" defer></script>
+    <script type="module" src="./js/main.js"></script>
     <title>Shelter</title>
   </head>
   <body>
@@ -134,7 +134,7 @@
                   alt="Katrine the cat"
                 />
                 <h3 class="card__title">Katrine</h3>
-                <button class="card__button button--secondary">
+                <button data-id="1" class="card__button button--secondary">
                   Learn more
                 </button>
               </article>
@@ -145,7 +145,7 @@
                   alt="Jennifer the dog"
                 />
                 <h3 class="card__title">Jennifer</h3>
-                <button class="card__button button--secondary">
+                <button data-id="2" class="card__button button--secondary">
                   Learn more
                 </button>
               </article>
@@ -156,7 +156,7 @@
                   alt="Woody the dog"
                 />
                 <h3 class="card__title">Woody</h3>
-                <button class="card__button button--secondary">
+                <button data-id="3" class="card__button button--secondary">
                   Learn more
                 </button>
               </article>
@@ -439,22 +439,32 @@
       </section>
     </main>
     <div class="popup">
-      <div class="popup__overlay">
-        <div class="popup__body">
-          <button class="popup__close"></button>
-          <img src="" alt="" class="popup__img" />
-          <div class="popup__info">
-            <h2 class="popup__title"></h2>
-            <h3 class="popup__subtitle"></h3>
-            <p class="popup__text"></p>
-
-            <ul class="popup__list">
-              <li class="popup__item">Age:</li>
-              <li class="popup__item">Inoculations:</li>
-              <li class="popup__item">Diseases:</li>
-              <li class="popup__item">Parasites:</li>
-            </ul>
-          </div>
+      <div class="popup__overlay"></div>
+      <div class="popup__body">
+        <button class="popup__close">
+          <img alt="close" src="./assets/icons/close.png" />
+        </button>
+        <img
+          src="./assets/images/pets-katrine.jpg"
+          alt="card-picture"
+          class="popup__img"
+        />
+        <div class="popup__info-wrapper">
+          <h2 class="popup__title"></h2>
+          <h3 class="popup__subtitle"></h3>
+          <p class="popup__text"></p>
+          <ul class="popup__list">
+            <li class="popup__age"><strong class="dark-font"></strong></li>
+            <li class="popup__inoculations">
+              <strong class="dark-font"></strong>
+            </li>
+            <li class="popup__diseases">
+              <strong class="dark-font"></strong>
+            </li>
+            <li class="popup__parasites">
+              <strong class="dark-font"></strong>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
