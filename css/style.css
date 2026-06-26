@@ -236,7 +236,12 @@ p {
   grid-template-columns: repeat(4, 270px);
   gap: 30px 40px;
   justify-content: center;
+  opacity: 1;
+  transition: opacity 0.3s ease;
   margin: 54px 0 46px -10px;
+}
+.pets-page__cards--hidden {
+  opacity: 0;
 }
 @media (max-width: 1279px) {
   .pets-page__cards {
@@ -1460,6 +1465,21 @@ p {
   .pets__pagination-current {
     order: 2;
   }
+}
+
+.pagination__arrow:disabled,
+.pagination__double-arrow:disabled {
+  opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
+}
+
+.pagination__arrow:disabled,
+.pagination__double-arrow:disabled {
+  border-color: #cdcdcd;
+  color: #cdcdcd;
+  cursor: default;
+  pointer-events: none;
 }
 
 .help {

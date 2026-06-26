@@ -25,4 +25,10 @@ export function initBurger() {
 		});
 	});
 
+	overlay.addEventListener('click', () => {
+		burgerIcon.classList.remove('burger-icon--active');
+		burgerMenu.classList.remove('burger-menu--active');
+		overlay.classList.remove('overlay--active');
+		document.body.classList.remove('no-scroll');
+	});
 }

@@ -7,7 +7,12 @@
 	grid-template-columns: repeat(4, 270px);
 	gap: 30px 40px;
 	justify-content: center;
+	opacity: 1;
+	transition: opacity 0.3s ease;
 	margin: 54px 0 46px -10px;
+	&--hidden {
+		opacity: 0;
+	}
 	@include respond (tablet) {
 		grid-template-columns: repeat(2, 270px);
 		margin: 30px 60px;

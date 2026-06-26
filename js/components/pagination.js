@@ -50,6 +50,7 @@ export function initPagination () {
 
 	let page = 1;
 	let resizeTimer;
+	let isAnimating = false;
 	const petsList = createPetsList();
 
 
@@ -64,45 +65,55 @@ export function initPagination () {
 	function getTotalPages() {
 		return Math.ceil(petsList.length / getCardsPerPage());
 	}
-
+	
 	function render() {
+		if(isAnimating) return;
+		isAnimating = true;
+		cardsContainer.classList.add('pets-page__cards--hidden');
 
-		const perPage = getCardsPerPage();
-
-		if(page > getTotalPages()) {
-			page = getTotalPages();
-		}
-
-		const start = (page - 1) * perPage;
-
-		const cards = petsList.slice(start, start + perPage);
-
-		cardsContainer.innerHTML = cards.map(pet => {
-			return `
-			<div class="pets__card card">
+		setTimeout (() => {
+			const perPage = getCardsPerPage();
 			
-			<img
-			class="card__img"
-			src="${pet.img}"
-			alt="${pet.name} the ${pet.type}"
-			>
 			
-			<h3 class="card__title">
-			${pet.name}
-			</h3>
+			if(page > getTotalPages()) {
+				page = getTotalPages();
+			}
 			
-			<button
-			data-id="${pet.id}"
-			class="card__button button--secondary">
-			Learn more
-			</button>
-			</div>
-			`;
+			const start = (page - 1) * perPage;
+			
+			const cards = petsList.slice(start, start + perPage);
+			
+			cardsContainer.innerHTML = cards.map(pet => {
+				return `
+				<div class="pets__card card">
+				
+				<img
+				class="card__img"
+				src="${pet.img}"
+				alt="${pet.name} the ${pet.type}"
+				>
+				
+				<h3 class="card__title">
+				${pet.name}
+				</h3>
+				
+				<button
+				data-id="${pet.id}"
+				class="card__button button--secondary">
+				Learn more
+				</button>
+				</div>
+				`;
 		}).join('');
-
+		
 		current.textContent = page;
-
+		
 		updateButtons();
+		requestAnimationFrame(() => {
+			cardsContainer.classList.remove('pets-page__cards--hidden');
+			isAnimating = false;
+		});
+	}, 300);
 	}
 
 	cardsContainer.addEventListener('click', (e) => {

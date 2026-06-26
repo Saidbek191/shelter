@@ -203,3 +203,17 @@
 	}
 }
 
+.pagination__arrow:disabled,
+.pagination__double-arrow:disabled {
+  opacity: 0.4;
+  cursor: default;
+  pointer-events: none;
+}
+
+.pagination__arrow:disabled,
+.pagination__double-arrow:disabled {
+  border-color: #cdcdcd;
+  color: #cdcdcd;
+  cursor: default;
+  pointer-events: none;
+}
