@@ -40,27 +40,31 @@ export function initPopup () {
 					popupParasites.innerHTML = `<strong class = "dark-font">Parasites:</strong> <span class = "slim-font">${pet.parasites.join(',')}</span>`;
 					
 					popup.classList.add('popup--active');
+					document.body.classList.add('no-scroll');
 		});
 	}
 
 	popupClose.addEventListener('click', () => {
 		popup.classList.remove('popup--active');
+		document.body.classList.remove('no-scroll');
 	});
 
 	overlay.addEventListener('click', () => {
 		popup.classList.remove('popup--active');
+		document.body.classList.remove('no-scroll');
 	});
 
 	popup.addEventListener('click', (e) => {
 		if (e.target === popup) {
 			popup.classList.remove('popup--active');
-
+			document.body.classList.remove('no-scroll');
 		}
 	});
 
 	document.addEventListener('keydown', (e) => {
 		if (e.key === 'Escape') {
 			popup.classList.remove('popup--active');
+			document.body.classList.remove('no-scroll');
 		}
 	});
 } 

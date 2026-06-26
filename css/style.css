@@ -306,7 +306,7 @@ p {
 .popup__body {
   display: flex;
   flex-wrap: wrap;
-  gap: 80px;
+  gap: 50px;
   max-width: 900px;
   width: 100%;
   align-items: center;
@@ -314,6 +314,17 @@ p {
   transform: scale(0.8);
   transition: transform 0.3s ease;
   border-radius: 10px;
+}
+@media (max-width: 1279px) {
+  .popup__body {
+    gap: 35px;
+  }
+}
+@media (max-width: 767px) {
+  .popup__body {
+    gap: 0;
+    max-width: 240px;
+  }
 }
 
 .popup__close {
@@ -332,13 +343,34 @@ p {
 .popup__close:hover {
   background-color: #f1cdb3;
 }
+@media (max-width: 767px) {
+  .popup__close {
+    right: -30px;
+  }
+}
 
 .popup__img {
   flex: 1 1 50%;
 }
+@media (max-width: 767px) {
+  .popup__img {
+    display: none;
+  }
+}
 
 .popup__info-wrapper {
   flex: 1 1 40%;
+  padding: 0 20px 0 30px;
+}
+@media (max-width: 1279px) {
+  .popup__info-wrapper {
+    padding: 0 10px;
+  }
+}
+@media (max-width: 767px) {
+  .popup__info-wrapper {
+    padding: 10px;
+  }
 }
 .popup__info-wrapper .popup__title {
   font-family: "Georgia", serif;
@@ -347,6 +379,11 @@ p {
   color: #211F20;
   letter-spacing: 0.06em;
 }
+@media (max-width: 767px) {
+  .popup__info-wrapper .popup__title {
+    text-align: center;
+  }
+}
 .popup__info-wrapper .popup__subtitle {
   font-family: "Georgia", serif;
   font-size: 20px;
@@ -354,6 +391,11 @@ p {
   color: #211F20;
   letter-spacing: 0.06em;
   padding-bottom: 40px;
+}
+@media (max-width: 767px) {
+  .popup__info-wrapper .popup__subtitle {
+    text-align: center;
+  }
 }
 .popup__info-wrapper .popup__text {
   max-width: 350px;
@@ -462,7 +504,7 @@ p {
 @media (max-width: 767px) {
   .burger-icon {
     position: fixed;
-    top: 50px;
+    top: 40px;
     right: 30px;
     width: 30px;
     height: 30px;
