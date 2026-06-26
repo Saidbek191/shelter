@@ -1,9 +1,11 @@
 import { pets } from '../data/pets.js';
 export function initSlider () {
 	const cardsContainer = document.querySelector('.pets__cards');
+
+	if (!cardsContainer.closest('.pets__slider')) return;
 	const prevBtn = document.querySelector('.pets__arrow--prev');
 	const nextBtn = document.querySelector('.pets__arrow--next');
-
+	
 	if (!cardsContainer || !prevBtn || !nextBtn) return;
 
 	let startIndex = 0;
@@ -63,9 +65,10 @@ export function initSlider () {
 	requestAnimationFrame(() => {
 					cardsContainer.classList.remove('pets__cards--left');
 					cardsContainer.classList.remove('pets__cards--right');
-
 					isAnimating = false;
 					direction = null;
 				});
 			});
+
+			renderCards();
 }
