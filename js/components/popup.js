@@ -18,18 +18,6 @@ export function initPopup () {
 	if (!popup || !popupClose || !popupImg || !popupTitle || !popupText) {
 		return;
 	}
-
-	// learnMoreButtons.forEach(button => {	
-		
-	// 	button.addEventListener('click', () => {
-			
-	// 		const id = Number(button.dataset.id);
-	// 		const pet = pets.find(p => p.id === id);
-
-	// 		if(!pet) return;
-
-	// 	});
-	// });
 	
 	if (cardsContainer) {
 		cardsContainer.addEventListener('click', (e) => {

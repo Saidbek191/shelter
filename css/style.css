@@ -1263,7 +1263,6 @@ p {
 
 .pets__cards {
   display: flex;
-  overflow: hidden;
   gap: 5.6rem;
   transition: transform 0.4s ease;
   will-change: transform;
