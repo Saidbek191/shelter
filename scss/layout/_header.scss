@@ -12,14 +12,21 @@
 		padding-top: 1.7rem;
 	}
 }
-.burger-menu {
-	max-height: $space-5;
+
+.no-scroll {
+	overflow: hidden;
+}
+
+.burger-icon {
+	// max-height: $space-5;
 	display: none;
-	position: relative;
+	// position: relative;
 	.burger__line {
+		// transform: rotate(0deg);
 		position: absolute;
-		top: -2px;
-		left: 12px;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
 		width: 30px;
 		height: 2px;
 		background-color: $color-primary;
@@ -41,18 +48,29 @@
 		}
 		&--dark {
 			background-color: $color-dark-l;
-
+			
 			&::before, &::after {
 				background-color: $color-dark-l;
 			}
 		}
 	}
 	@include respond(mobile) {
+		position: fixed;
+		top: 40px;
+		right: 30px;
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+		transform: rotate(0deg);
 		display: block;
+		z-index: 999;
+		transition: all 0.3s ease-in-out;
+		transform-origin: center;
+		&--active {
+			transform: rotate(90deg);
+		}
 	}
 }
-
-
 
 .header__logo {
 	z-index: 2;
@@ -83,6 +101,71 @@
 		color: $color-light-xl;
 	}
 }
+
+.burger-menu{
+	display: none;
+	@include respond(mobile) {
+		display: block;
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 100dvh;
+		overflow-y: auto;
+		width: 320px;
+		z-index: 80;
+		background-color: $color-dark-3xl;
+		color: $color-dark-s;
+		transform: translateX(100%);
+		transition: transform 0.3s ease-in-out;
+		}
+	&--active {
+		transform: translateX(0);
+	}
+	.burger__nav {
+		@include respond (mobile) {
+			display: flex;
+			height: 100%;
+			justify-content: center;
+			align-items: center;
+		}	
+	}
+	.burger__list {
+		display: flex;
+		flex-direction: column;
+		gap: $space-8;
+		font-size: $fs-xl;
+		text-align: center;
+		// @include respond(mobile) {
+			// }
+		}
+		.burger__link {
+			border-bottom: 2px solid transparent;
+			transition: border-bottom 0.2s ease-in-out;
+			&:hover {
+				color: $color-light-s;
+				border-bottom: 2px solid $color-primary;
+			}
+			
+		}
+	}
+	
+	.overlay {
+	position: fixed;
+	inset: 0;
+	background: rgba(0,0,0,.4);
+	display: none;
+	z-index: 50;
+	&--active {
+		display: block;
+	}
+}
+
+// .menu-open {
+// 	overflow: hidden;
+
+	
+	
+// }
 
 
 .header__nav {

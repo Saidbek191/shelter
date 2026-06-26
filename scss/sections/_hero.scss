@@ -5,8 +5,8 @@
 .bg--gradient {
 	position: relative;
 	background: $start-screen-gradient;
-	overflow: hidden;
-	z-index: 0;
+	overflow: visible;
+	// z-index: 0;
 	&::before {
 		content: "";
 		position: absolute;
