@@ -23,15 +23,13 @@ export function initSlider() {
 		return [...array].sort(() => Math.random() - 0.5);
 	}
 
-	// генерация группы без пересечений с предыдущей
 	function generateGroup() {
 		const count = getCardsPerView();
 
 		let pool = pets.filter(
-			pet => !previousGroup.includes(pet)
+			pet => !currentGroup.includes(pet)
 		);
 
-		// если вдруг не хватает (страховка)
 		if (pool.length < count) {
 			pool = [...pets];
 		}
@@ -40,6 +38,7 @@ export function initSlider() {
 
 		return shuffled.slice(0, count);
 	}
+
 
 	function render(group) {
 		cardsContainer.innerHTML = group.map(pet => `
@@ -63,7 +62,6 @@ export function initSlider() {
 				: 'pets__cards--right'
 		);
 
-		// подготовка следующей группы
 		const nextGroup = generateGroup();
 
 		cardsContainer.addEventListener('transitionend', function handler(e) {
@@ -88,12 +86,10 @@ export function initSlider() {
 	nextBtn.addEventListener('click', () => move('next'));
 	prevBtn.addEventListener('click', () => move('prev'));
 
-	// init
 	currentGroup = generateGroup();
 	render(currentGroup);
 
 	window.addEventListener('resize', () => {
-		//пересобираю группу под новый viewport
 		currentGroup = generateGroup();
 		render(currentGroup);
 	});

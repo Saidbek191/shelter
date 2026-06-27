@@ -8,9 +8,6 @@
 	background-color: $color-light-l;
 	padding: 5rem 0 $space-19 0;
 	margin: 0 24px 0 0;
-	@include respond (tablet) {
-		// margin: 0 25px 0 0;
-	}
 	@include respond (mobile) {
 		padding: $space-9 0;
 		margin: -55px 0 0 0;
@@ -50,18 +47,14 @@
 
 .pets__cards {
 	display: flex;
-	// flex-wrap: wrap;
-	// overflow: hidden;
 	gap: $space-18;
 	transition: transform 0.4s ease;
 	will-change: transform;
 	&--left {
 		transform: translateX(-50px);
-		// opacity: 0;
 	}
 	&--right {
 		transform: translateX(50px);
-		// opacity: 0;
 	}
 	@include respond (tablet) {
 		flex-wrap: nowrap;

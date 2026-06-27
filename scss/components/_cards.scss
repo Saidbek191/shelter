@@ -75,7 +75,6 @@
 	position: absolute;
 	inset: 0;
 	background-color: rgba(0, 0, 0,.3);
-	// width: 100%;
 }
 .popup__body {
 	display: flex;
@@ -113,7 +112,6 @@
 		background-color: $color-primary;
 	}
 	@include respond (mobile) {
-		// top: -40px;
 		right: -30px;
 	}
 }

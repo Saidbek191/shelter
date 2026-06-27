@@ -7,13 +7,14 @@ export function initPopup () {
 	const popupTitle = document.querySelector('.popup__title');
 	const popupSubtitle = document.querySelector('.popup__subtitle');
 	const popupText = document.querySelector('.popup__text');
-	const learnMoreButtons = document.querySelectorAll('.card__button');
 
 	const popupAge = document.querySelector('.popup__age');
 	const popupInoc = document.querySelector('.popup__inoculations');
 	const popupDiseases = document.querySelector('.popup__diseases');
 	const popupParasites = document.querySelector('.popup__parasites');
-	const cardsContainer = document.querySelector('.pets__cards');
+	const cardsContainer = 
+	document.querySelector('.pets__cards') || 
+	document.querySelector('.pets-page__cards');
 
 	if (!popup || !popupClose || !popupImg || !popupTitle || !popupText) {
 		return;
@@ -21,11 +22,10 @@ export function initPopup () {
 	
 	if (cardsContainer) {
 		cardsContainer.addEventListener('click', (e) => {
-			const button = e.target.closest('.card__button');
+			const card = e.target.closest('.card');
+			if (!card) return;
 			
-			if (!button) return;
-			
-			const id = Number(button.dataset.id);
+			const id = Number(card.querySelector('.card__button').dataset.id);
 			const pet = pets.find(p => p.id === id);
 			
 			if (!pet) return;
@@ -52,13 +52,6 @@ export function initPopup () {
 	overlay.addEventListener('click', () => {
 		popup.classList.remove('popup--active');
 		document.body.classList.remove('no-scroll');
-	});
-
-	popup.addEventListener('click', (e) => {
-		if (e.target === popup) {
-			popup.classList.remove('popup--active');
-			document.body.classList.remove('no-scroll');
-		}
 	});
 
 	document.addEventListener('keydown', (e) => {
