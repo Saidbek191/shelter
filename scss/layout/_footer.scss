@@ -190,7 +190,9 @@
 		margin: -5px 37px 0 0;
 		justify-content: space-between;
 		gap: 96px;
-		
+		@include respond (mobile) {
+			margin: -5px 0 0 0;
+		}
 		.footer__content-wrapper-page {
 			gap: 150px;
 			@include respond (tablet) {

@@ -50,6 +50,7 @@
 	gap: $space-18;
 	transition: transform 0.4s ease;
 	will-change: transform;
+	touch-action: pan-y;
 	&--left {
 		transform: translateX(-50px);
 	}
@@ -59,6 +60,7 @@
 	@include respond (tablet) {
 		flex-wrap: nowrap;
 		gap: $space-9;
+		justify-content: center;
 	}
 	@include respond (mobile) {
 		order: 1;
