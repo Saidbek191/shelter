@@ -22,30 +22,34 @@ export function initPagination () {
 
 	function createPetsList () {
 		const result = [];
-
+		const petsList = [];
 		const copies = 6;
 
 		for(let i = 0; i < copies; i++) {
 			result.push(...pets);
 		}
 
-		const shuffled = [];
-
 		while(result.length) {
-			const index = Math.floor(Math.random() * result.length);
+			const last = petsList.at(-1);
+			
+			let available = result.filter(
+				pet => !last || pet.name !== last.name
+			);
 
-			const pet = result[index];
-
-			const last = shuffled.at(-1);
-
-			if(last && last.name === pet.name) {
-				continue;
+			if (available.length === 0) {
+				break;
 			}
+			const pet =
+				available[Math.floor(Math.random() * available.length)];
 
-			shuffled.push(pet);
-			result.splice(index, 1);
+			petsList.push(pet);
+
+			result.splice(result.indexOf(pet), 1);
 		}
-		return shuffled;
+		if (petsList.length !== copies * pets.length) {
+			return createPetsList();
+		}
+		return petsList;
 	}
 
 	let page = 1;
@@ -117,7 +121,7 @@ export function initPagination () {
 	}
 
 	cardsContainer.addEventListener('click', (e) => {
-		const button = event.target.closest('.card__button');
+		const button = e.target.closest('.card__button');
 
 		if(!button) return;
 

@@ -18,11 +18,8 @@
 }
 
 .burger-icon {
-	// max-height: $space-5;
 	display: none;
-	// position: relative;
 	.burger__line {
-		// transform: rotate(0deg);
 		position: absolute;
 		top: 50%;
 		left: 0;
@@ -135,8 +132,6 @@
 		gap: $space-8;
 		font-size: $fs-xl;
 		text-align: center;
-		// @include respond(mobile) {
-			// }
 		}
 		.burger__link {
 			border-bottom: 2px solid transparent;
@@ -159,14 +154,6 @@
 		display: block;
 	}
 }
-
-// .menu-open {
-// 	overflow: hidden;
-
-	
-	
-// }
-
 
 .header__nav {
 	z-index: 2;

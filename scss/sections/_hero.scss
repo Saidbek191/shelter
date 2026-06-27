@@ -6,7 +6,6 @@
 	position: relative;
 	background: $start-screen-gradient;
 	overflow: visible;
-	// z-index: 0;
 	&::before {
 		content: "";
 		position: absolute;
@@ -106,7 +105,6 @@
 .hero__img {
 	z-index: 2;
 	margin-top: 90px;
-	// width: 100%;
 	flex: 0 0 58.17%;
 	.img__hero {
 		@include respond (tablet) {
