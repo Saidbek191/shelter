@@ -1,0 +1,78 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+.button {
+	width: 16.375rem;
+	height: $space-11;
+	@include btn-property;
+	cursor: pointer;
+	border: none;
+	background-color: $color-primary;
+	transition: background-color 0.2s ease-in-out;
+	&:hover {
+		background-color: $color-primary-light;
+	}
+}
+
+.button--secondary {
+	width: 11.75rem;
+	height: 3.25rem;
+	@include btn-property;
+	background: transparent;
+	border: 2px solid $color-primary;
+	transition: background-color 0.2s ease-in-out;
+	cursor: pointer;
+	&:hover {
+		background-color: $color-primary-light;
+		border-color: transparent;
+	}
+}
+
+.pets__arrow--prev, .pets__arrow--next {
+	display: inline-block;
+	width: 52px;
+	height: 52px;
+	text-align: center;
+	border: 2px solid $color-primary;
+	border-radius: 100%;
+	background-color: transparent;
+	cursor: pointer;
+	transition: background-color 0.2s ease-in-out;
+&:hover {
+	background-color: $color-primary-light;
+	border-color: transparent;
+}
+}
+.pets__arrow--prev {
+transform: rotate(180deg);
+&:hover {
+	background-color: $color-primary-light;
+	border-color: transparent;
+}	
+}
+.pets__slider {
+	
+	
+	.pets__arrow--prev {
+		margin-right: $space-11;
+		padding-top: 0;
+		transform: rotate(360deg);
+	@include respond (tablet) {
+		margin-right: $space-2;
+	}
+	@include respond (mobile) {
+		order: 2;
+		margin: 20px 72px 27px 0;
+	}
+}
+.pets__arrow--next {
+	margin-left: $space-11;
+	padding-bottom: 5px;
+	transform: rotate(180deg);
+	@include respond (tablet) {
+		margin-left: $space-2;
+	}
+	@include respond (mobile) {
+		order: 2;
+	}
+}
+}

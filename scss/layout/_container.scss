@@ -1,0 +1,14 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+
+.container {
+	width: 100%;
+	max-width: 1200px;
+	margin: 0 auto;
+	@include respond (tablet) {
+		padding: 0 30px;
+	}
+	@include respond (mobile) {
+		padding: 0 10px;
+	}
+}

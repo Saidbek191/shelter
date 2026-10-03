@@ -1,0 +1,249 @@
+@use '../abstracts/mixins' as *;
+@use '../abstracts/variables' as *;
+@use '../base/typography';
+
+.header__wrapper {
+	padding-top: 2.2rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	height: $space-18;
+	@include respond(tablet) {
+		padding-top: 1.7rem;
+	}
+}
+
+.no-scroll {
+	overflow: hidden;
+}
+
+.burger-icon {
+	display: none;
+	.burger__line {
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translateY(-50%);
+		width: 30px;
+		height: 2px;
+		background-color: $color-primary;
+		transition: all 0.3s ease-in-out;
+		&::before, &::after {
+			content: "";
+			width: 30px;
+			height: 2px;
+			background-color: $color-primary;
+			position: absolute;
+			left: 0;
+			transition: all 0.3s ease-in-out;
+		}
+		&::before {
+			top: -9px;
+		}
+		&::after {
+			top: 9px;
+		}
+		&--dark {
+			background-color: $color-dark-l;
+			
+			&::before, &::after {
+				background-color: $color-dark-l;
+			}
+		}
+	}
+	@include respond(mobile) {
+		position: fixed;
+		top: 40px;
+		right: 30px;
+		width: 30px;
+		height: 30px;
+		cursor: pointer;
+		transform: rotate(0deg);
+		display: block;
+		z-index: 999;
+		transition: all 0.3s ease-in-out;
+		transform-origin: center;
+		&--active {
+			transform: rotate(90deg);
+		}
+	}
+}
+
+.header__logo {
+	z-index: 2;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 0.4rem;
+	cursor: default;
+	margin: -2px 0 0 -12px;
+	@include respond(tablet) {
+		gap: 0.5rem;
+	}
+	@include respond(mobile) {
+		margin: 4px 0 0 10px;
+	}
+	.logo {
+		font-family: $font-main;
+		font-size: $fs-xl;
+		line-height: $lh-pets-character;
+		letter-spacing: 0.06em;
+		color: $color-primary;
+	}
+	
+	.logo__subtitle {
+		font-family: $font-secondary;
+		font-size: $fs-1xs;
+		letter-spacing: 0.1em;
+		color: $color-light-xl;
+	}
+}
+
+.burger-menu{
+	display: none;
+	@include respond(mobile) {
+		display: block;
+		position: fixed;
+		top: 0;
+		right: 0;
+		height: 100dvh;
+		overflow-y: auto;
+		width: 320px;
+		z-index: 80;
+		background-color: $color-dark-3xl;
+		color: $color-dark-s;
+		transform: translateX(100%);
+		transition: transform 0.3s ease-in-out;
+		}
+	&--active {
+		transform: translateX(0);
+	}
+	.burger__nav {
+		@include respond (mobile) {
+			display: flex;
+			height: 100%;
+			justify-content: center;
+			align-items: center;
+		}	
+	}
+	.burger__list {
+		display: flex;
+		flex-direction: column;
+		gap: $space-8;
+		font-size: $fs-xl;
+		text-align: center;
+		}
+		.burger__link {
+			border-bottom: 2px solid transparent;
+			transition: border-bottom 0.2s ease-in-out;
+			&:hover {
+				color: $color-light-s;
+				border-bottom: 2px solid $color-primary;
+			}
+			
+		}
+	}
+	
+	.overlay {
+	position: fixed;
+	inset: 0;
+	background: rgba(0,0,0,.4);
+	display: none;
+	z-index: 50;
+	&--active {
+		display: block;
+	}
+}
+
+.header__nav {
+	z-index: 2;
+	font-family: $font-secondary;
+	font-size: $fs-sm;
+	.header__list {
+		display: flex;
+		gap: 2rem;
+		margin: 0 11px 7px 0;
+		letter-spacing: 0.3px;
+		@include respond(tablet) {
+			margin: 0px 12px 6px 0;
+		}
+		@include respond(mobile) {
+			display: none;
+		}
+	}
+	
+	
+	.header__item {
+		color: $color-dark-s;
+		line-height: $lh-base;
+		border-bottom: 2px solid transparent;
+		transition: border-bottom 0.2s ease-in-out;
+		&:hover {
+			border-bottom: 2px solid $color-primary;
+		}
+		.header__link--active {
+			padding-bottom: 2px;
+			border-bottom: 2px solid $color-primary;
+			&:hover {
+				border-bottom: 2px solid transparent;
+				color: $color-light-s;
+			}
+		}
+	}
+}
+
+
+// OUR PETS PAGE
+
+.bg--white {
+	background-color: $color-light-xl;
+	padding: 0 0 $space-6 0;
+	.logo__subtitle--dark {
+		color: $color-dark-3xl;
+	}
+}
+
+.header__nav--dark {
+		font-weight: 600;
+		.header__list--dark {
+			display: flex;
+			gap: 1.8rem;
+			margin: 0 12px 0 0;
+		@include respond(tablet) {
+			gap: 1.9rem;
+			margin: 5px 10px 5px 0;
+		}
+		@include respond(mobile) {
+			display: none;
+		}
+			.header__item--dark {
+				color: $color-dark-l;
+				font-size: 14px;
+			}
+			.header__link--dark {
+				@include respond(tablet) {
+					font-size: 15px;
+					letter-spacing: 0%;
+				}
+			}
+			.header__link--dark-active {
+				border-bottom: 3px solid $color-primary;
+				color: $color-dark-3xl;
+			}
+		}
+	}
+		
+.wrapper--white {
+	padding-top: 1.8rem;
+	.header__logo--dark {
+		gap: 0.5rem;
+		@include respond(tablet) {
+			margin: 4px 0 0 10px;
+		}
+		.logo--dark {
+			color: $color-dark-l;
+			font-size: $fs-xl;
+			letter-spacing: 0.06em;
+		}
+	}
+}

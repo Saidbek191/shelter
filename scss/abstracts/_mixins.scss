@@ -1,0 +1,30 @@
+@use '../abstracts/variables' as *;
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == tablet {
+		@media (max-width: 1279px) {
+			@content;
+		}
+	}
+	@if $breakpoint == mobile {
+		@media (max-width: 767px) {
+			@content;
+		}
+	}
+}
+
+@mixin flex-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin btn-property {
+	display: inline-block;
+	font-family: $font-main;
+	font-size: $fs-1base;
+	letter-spacing: 6%;
+	line-height: $lh-title;
+	color: $color-dark-3xl;
+	border-radius: 100px;
+}

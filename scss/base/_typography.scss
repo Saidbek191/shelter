@@ -1,0 +1,80 @@
+@use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
+
+body {
+	font-family: $font-secondary;
+	font-size: $fs-sm;
+	line-height: $lh-base;
+	color: $color-dark-3xl;
+}
+
+@font-face {
+	font-family: "Georgia";
+	src: url("../../assets/fonts/Georgia-Regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Georgia";
+	src: url("../../assets/fonts/Georgia-Bold.woff2") format("woff2");
+	font-weight: 700;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: "Arial";
+	src: url("../../assets/fonts/Arial-ItalicMT.woff2") format("woff2");
+	font-weight: 400;
+	font-style: italic;
+	font-display: swap;
+}
+@font-face {
+	font-family: "Arial";
+	src: url("../../assets/fonts/Arial-Regular.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+	font-display: swap;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 400;
+	font-family: $font-main;
+}
+	
+h1 {
+	font-size: $fs-2xl;
+	line-height: $lh-title;
+}
+
+h2 {
+	font-size: $fs-1xl;
+	line-height: $lh-title;
+	letter-spacing: 0.06em;
+
+}
+
+h3 {
+	font-size: $fs-1xl;
+	line-height: $lh-title;
+	letter-spacing: 0.06em;
+}
+
+h4 {
+	font-size: $fs-md;
+	line-height: $lh-pets-title;
+	letter-spacing: 0.06em;
+}
+
+h5 {
+	font-size: $fs-base;
+	line-height: $lh-pets-character;
+	letter-spacing: 0.06em;
+}
+
+p {
+	font-size: $fs-base;
+	line-height: $lh-base;
+}
